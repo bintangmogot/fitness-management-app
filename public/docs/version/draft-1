@@ -1,0 +1,169 @@
+jadi aku akan membuat sebuah tahap terlebih dahulu sebelum benar-benar membangun website atau coding. aku akan membuat blueprint supaya benar-benar matang dan supaya kalau klien ku melihat itu proses nya memang benar-benar dari nol dan lebih kelihatan kritis. Tetapi untuk awal-awal ini tolong kamu jangan langsung berikan jawaban terbaiknya, tetapi memberikan saran dan alasannya supaya aku juga bisa bertumbuh menjadi seorang web developer yang baik.
+
+1. planning
+di sini ada 3 pokok utama yang harus dipunyai yaitu problem, app flow atau alurnya bisa lewat flowchart atau lainnya, dan fitur utama
+2. frontend
+ada bagian wireframe, ui, dan navigation
+3. backend
+di sini perlu database dan api endpoints
+
+(kalau ada yang kurang tolong ditambahkan)
+
+WEBSITE COACH YOHAN - IN SHAPE IN BALI
+
+1. Planning
+a. problem 
+aku adalah seorang web fullstack developer yang bekerja secara mandiri sendirian atau bisa dibilang freelancer. Saat ini aku ada klien seorang personal trainer di Bali tepatnya di canggu, dimana untuk pasarnya mayoritas 90% adalah orang bule atau turis. Saat ini ada masalah bagaimana caranya supaya dia bisa lebih dikenal dan supaya orang bule kalau cari personal trainer di google atau di sosmed, namanya bisa muncul teratas, jadi ketika ada orang baru datang ke negara indonesia yang dimana asing baginya karena bukan rumah asalnya, pastinya bingung juga mencari personal terpercaya dan kredibel. 
+
+Target : Asing yang bingung mencari personal trainer di Bali
+
+Solusi : oleh karena itu solusi dari masalah ini adalah membuat sebuah website application yang dimana tidak hanya menampilkan sebuah profil diri beserta portfolio seperti menampilkan daftar foto dengan klien serta transformasinya, pengalaman kerja, sertifikasi, video sosmed yang akan di-post setiap hari, dll (masih tidak tahu apa saja kira-kira yang bisa menjadi portfolio seorang personal trainer). Tetapi akan ada juga penjualan paket coach pt, dimana nanti user dapat mem-booking secara online PT(personal trainer) ini dengan memilih berbagai paket berdasarkan periode maupun kelengkapan benefit yang didapat, serta dapat memesan paket makanan sehat box.
+Ctt : PT ini hanya akan ada 1 orang saja, karena nanti nama website nya juga adalah nama orang bukan sebuah brand. 
+Solusi sudah jelas: website portfolio + booking system
+
+
+produk : 
+a. paket coach pt (periode 10 sesi, 20 sesi, dan 30 sesi (bisa berkembang ke selanjutnya) 
+b. resep makanan atau paket makanan sehat box meal
+c. video pelatihan 
+
+arsitektur pemrograman :
+a. html, css, javascript, php
+b. vue js, laravel
+c. postgre sql, apache
+d. os linux ubuntu
+
+b. app flow
+1. input data 
+2. tampilkan daftar portfolio
+3. tampilkan daftar produk
+4. proses memasukkan produk ke keranjang
+5. proses checkout
+6. proses pembayaran melalui payment gateway
+7. proses selesai
+
+pertanyaan :
+- Bagaimana jika user hanya ingin lihat portfolio tanpa beli? 
+  USER BISA MELIHAT SEMUA PRODUK TANPA HARUS LOGIN
+- Bagaimana alur user yang sudah pernah beli dan mau repeat order?
+  USER BISA MELIHAT RIWAYAT PEMBELIAN DAN BISA MELAKUKAN PEMBELIAN ULANG
+  a. user login
+  b. user melihat riwayat pembelian (tersedia tombol beli ulang)
+  c. user memilih produk yang ingin dibeli ulang (misal: paket coach pt 10 sesi)
+  d. user melakukan pembayaran
+  e. selesai
+- Apa yang terjadi setelah payment sukses? Apakah ada email konfirmasi? Kalender booking?
+  a. user mendapatkan email konfirmasi
+  b. user mendapatkan notifikasi
+  c. (kalender booking jika memungkinkan) karena jika yang beli ada 100 client maka akan sangat susah untuk mengaturnya
+
+  - Fitur refund & cancel
+a. Berapa hari sebelum sesi pertama boleh cancel?
+  - maksimal H-1 (24 jam sebelum sesi pertama)
+b. Refund full atau potongan %?
+  - refund full
+  - potongan 50% jika cancel setelah H-1
+c. Apakah bisa reschedule (bukan cancel)?
+  - bisa reschedule maksimal 24 jam sebelum sesi pertama
+
+- Fitur cart
+a. Apakah ada fitur cart?
+  - Hanya pada produk makanan sehat
+b. Apakah ada fitur checkout?
+  - Tersedia untuk semua produk, jadi selain makanan sehat, produk lainnya akan langsung diarahkan ke payment gateway
+
+- Fitur Video Pelatihan - Monetization Model
+a. Apakah user beli satu video atau akses semua video (subscription)?
+  - bisa akses semua video
+b. Apakah ada masa berlaku akses video?
+  - ada masa berlaku akses video
+  - masa berlaku adalah 1 bulan
+c. Apakah video bisa di-download atau hanya streaming?
+  - hanya streaming
+
+
+- Fitur Multi-Language
+ English-only dulu (karena 90% target adalah bule). Indonesian bisa ditambah di phase 2.
+ 
+- fitur kalender booking (draft)
+  a. user dan admin dapat melihat kalender booking, misalnya user membeli paket coach pt 10 sesi, maka user dapat melihat di hari apa saja sesi pelatihan akan dilakukan tetapi tidak dapat memilih tanggalnya, melainkan admin yang dapat memilih tanggalnya, jika ingin mengubah jadwalnya harus menghubungi admin terlebih dahulu. 
+  b. admin dapat melihat kalender booking dengan semua data klien yang membeli paket coach pt dan dapat memilih tanggal serta kliennya.
+  c. admin dapat mennambahkan atau mengedit jadwal sesi pelatihan
+  d. admin dapat melihat riwayat booking (tetapi tidak ada fitur checklist sudah atau belumnya sesi pelatihan)
+
+
+
+# guest user
+- user membuka website langsung melihat daftar produk mulai dari portfolio trainer, video sosial media, box meal makanan sehat, paket coach pt, dan video pelatihan online. tetapi guest user hanya dapat melihat belum bisa mem-booking atau melakukan transaksi.
+- user akan dibedakan menjadi 3 yaitu, guest user, user logged in, dan admin. 
+- ketika guest user daftar, dapat melalui google account, lalu status menjadi user logged in
+
+# logged in user
+- user memilih produk yang disediakan
+- user menambahkan produk ke keranjang (tidak bisa menggabungkan produk yang beda kategori)
+- logged in user dapat lanjut ke halaman checkout dengan mengisi data diri
+- user lanjut ke payment gateway melalui xendit atau lainnya.
+- user melakukan pembayaran
+- untuk paket coach pt, user langsung diarahkan ke whatsapp untuk penentuan jadwal sesi pelatihan
+- user dapat melihat daftar latihan kalender (hanya melihat)
+- admin dapat melihat daftar latihan kalender (melihat dan mengedit)
+
+# admin
+- user dapat crud konten sosmed
+- user dapat crud paket coach pt
+- user dapat crud box meal makanan sehat
+- user dapat crud video pelatihan
+- user dapat melihat daftar user yang sudah mendaftar
+- user dapat melihat daftar transaksi
+- user dapat melihat daftar booking 
+- user dapat kelola data history
+- user dapat melihat laporan penjualan per periode 
+- user dapat melihat laporan klien paling sering memesan
+
+
+c. fitur-fitur
+1. pembeda antara guest user, logged in user, dan admin
+2. hash password user
+3. crud admin untuk semua data
+4. add to cart
+5. checkout
+6. payment gateway
+7. laporan data
+8. export data
+9. video youtube private to website (untuk video pelatihan online)
+10. Kalender booking Semi-automated → user lihat slot available, request via website, admin approve
+11. Notifikasi melalui dashboard dan email
+12. refund & cancel (belum tahu bagaimana)
+13. English (main) & Bahasa Indonesia (secondary)
+14. Review/Testimonials (setelah sesi telah selesai)
+15. Tracking visitor
+
+d. SEO 
+# Kata kunci utama : personal trainer bali, personal trainer canggu, personal trainer denpasar, personal trainer seminyak, personal trainer ubud, pt bali, trainer bali, coach bali, fitness bali, fitness trainer bali
+- menggunakan kata kunci utama di setiap halaman
+- menggunakan meta description
+- menggunakan html semantic
+- menambahkan alt & title image
+- menambahkan internal linking ke halaman lain 
+- menambahkan backlink dari website yang kredibel
+- loading cepat 
+- responsive 
+- SSL certificate (HTTPS)
+- Struktur website yang jelas (sitemap)
+- Fix broken links dan error 404
+- monitoring di pagespeedinsight
+
+e. kenapa website?
+- karena menunjukkan adanya profesionalitas sehingga klien akan lebih percaya bahwa coach yohan adalah personal trainer yang kredibel dan terpercaya
+- karena dengan website, coach yohan dapat menampilkan semua informasi yang ingin disampaikan kepada klien
+- karena dengan website, klien dapat memesan paket coach pt dan box meal makanan sehat secara online
+
+f. differentiator
+- Certified Ade Rai Personal Trainer
+- 50+ clients transformation
+- 5 tahun pengalaman training clients
+- private gym eksklusif
+
+
+
+
