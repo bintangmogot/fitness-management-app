@@ -4,66 +4,109 @@
    ============================================ */
 
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800;900&family=Anton&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300..900;1,300..900&family=Anton&family=Bebas+Neue&display=swap');
 
 /* 2. Import Tailwind v4 */
 @import "tailwindcss";
+
 /* ============================================
    CSS VARIABLES (Custom Properties)
    ============================================ */
 /* 3. Define Theme Variables */
 @theme {
   /* === COLORS (Must start with --color-) === */
-  
+
   /* Primary */
   --color-primary: #0046DE;
   --color-primary-hover: #0037B0;
-  
+
   /* Backgrounds */
-  --color-bg-white: #F9F9F9;      /* Main background */
-  --color-bg-secondary: #F3F4F6;  /* Secondary background */
-  --color-card-white: #FFFFFF;    /* White cards */
-  
+  --color-bg-white: #F9F9F9;
+  /* Main background */
+  --color-bg-secondary: #F3F4F6;
+  /* Secondary background */
+  --color-card-white: #FFFFFF;
+  /* White cards */
+
   /* Dark Theme */
-  --color-dark-bg: #0F0F23;       /* Main dark background (Not #000000) */
-  --color-card-dark: #171736;     /* Dark cards */
-  
+  --color-dark-bg: #0F0F23;
+  /* Main dark background (Not #000000) */
+  --color-card-dark: #171736;
+  /* Dark cards */
+
   /* Text */
-  --color-text-body: #4B5563;     /* Paragraph text */
+  --color-text-body: #4B5563;
+  /* Paragraph text */
   --color-text-muted: #6b7280;
-  
+
   /* Accents */
   --color-hover-light: #EFF6FF;
   --color-line: #C2D8F4;
-  
+
   /* === FONTS (Must start with --font-) === */
   /* Usage: font-title, font-heading, font-body */
   --font-title: 'Saira', sans-serif;
+  /* atau 'Anton', sans-serif */
+  --font-anton: 'Anton', sans-serif;
   --font-heading: 'Bebas Neue', cursive;
   --font-body: 'Saira', sans-serif;
+
+  /* === TYPOGRAPHY SCALE (Must use --text-* prefix) === */
+  /* Di CSS: --text-hero | Di HTML: class="text-hero" */
+
+  /* Hero / Main Title (untuk homepage hero section) */
+  --text-hero: clamp(5rem, 6vw, 10rem);
+  /* 40px → 80px (responsive) */
+
+  /* Headings (untuk section titles) */
+  --text-heading-1: clamp(2rem, 4vw, 3rem);
+  /* 32px → 48px */
+  --text-heading-2: clamp(1.5rem, 3vw, 2.25rem);
+  /* 24px → 36px */
+  --text-heading-3: clamp(1.25rem, 2.5vw, 1.875rem);
+  /* 20px → 30px */
+  --text-heading-4: 1.125rem;
+  /* 18px (fixed) */
+
+  /* Body Text */
+  --text-body: clamp(0.875rem, 1vw, 1rem);
+  /* 14px → 16px */
+  --text-body-lg: clamp(1rem, 1.2vw, 1.125rem);
+  /* 16px → 18px */
+
+  /* Small Text (caption, metadata, labels) */
+  --text-caption: 0.875rem;
+  /* 14px */
+  --text-small: 0.75rem;
+  /* 12px */
+
+  /* Button Text */
+  --text-button: 1.5rem;
+  /* 24px */
+  --text-button-sm: 1.25rem;
+  /* 20px */
   
-  /* === SPACING (Must start with --spacing-) === */
-  /* Usage: p-xs, m-xl, gap-md */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-  --spacing-3xl: 6rem;
-  
+
   /* === SHADOWS (Must start with --shadow-) === */
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-card-hover: 0 8px 24px rgba(0, 70, 222, 0.15);
-  
+
   /* === ANIMATIONS (Must start with --animate-) === */
   --animate-float: float 3s ease-in-out infinite;
-  
+
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }
+
 /* ============================================
    BASE STYLES
    ============================================ */
@@ -72,14 +115,44 @@ body {
   color: var(--color-text-body);
   background-color: var(--color-bg-white);
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   line-height: 1.2;
 }
-/* Utility tambahan yang tidak bisa di-handle @theme */
+
+/* ============================================
+   CUSTOM UTILITY CLASSES
+   ============================================ */
+
+/* Font Family Utilities (Tailwind v4 tidak auto-generate ini) */
+.font-title {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 8%;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Hover Lift Effect */
 .hover-lift {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-card-hover);
