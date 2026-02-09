@@ -8,6 +8,7 @@
 
 /* 2. Import Tailwind v4 */
 @import "tailwindcss";
+@plugin "daisyui";
 
 /* ============================================
    CSS VARIABLES (Custom Properties)
@@ -50,6 +51,7 @@
   --font-anton: 'Anton', sans-serif;
   --font-heading: 'Bebas Neue', cursive;
   --font-body: 'Saira', sans-serif;
+  --font-button: 'Bebas Neue', cursive;
 
   /* === TYPOGRAPHY SCALE (Must use --text-* prefix) === */
   /* Di CSS: --text-hero | Di HTML: class="text-hero" */
@@ -85,7 +87,7 @@
   /* 24px */
   --text-button-sm: 1.25rem;
   /* 20px */
-  
+
 
   /* === SHADOWS (Must start with --shadow-) === */
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -123,7 +125,6 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  line-height: 1.2;
 }
 
 /* ============================================
@@ -146,6 +147,11 @@ h6 {
 
 .font-body {
   font-family: var(--font-body);
+}
+
+.font-button {
+  font-family: var(--font-button);
+  letter-spacing: 4%;
 }
 
 /* Hover Lift Effect */
