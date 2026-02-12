@@ -12,6 +12,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     About: typeof import('./components/About.vue')['default']
+    BentoGrid: typeof import('./components/BentoGrid.vue')['default']
     CatalogNutrition: typeof import('./components/CatalogNutrition.vue')['default']
     CTA: typeof import('./components/CTA.vue')['default']
     Facts: typeof import('./components/Facts.vue')['default']
@@ -20,11 +21,13 @@ declare module 'vue' {
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
     Hero2nd: typeof import('./components/Hero2nd.vue')['default']
+    Important: typeof import('./components/Important.vue')['default']
     Location: typeof import('./components/Location.vue')['default']
     MealPlan: typeof import('./components/MealPlan.vue')['default']
     MemberSuccess: typeof import('./components/MemberSuccess.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     QuickTip: typeof import('./components/QuickTip.vue')['default']
+    ReadyToTransform: typeof import('./components/ReadyToTransform.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Services: typeof import('./components/Services.vue')['default']

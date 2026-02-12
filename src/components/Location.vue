@@ -1,5 +1,11 @@
 <template>
-  <section class="py-20 px-6 md:px-12 lg:px-20 xl:px-30 bg-bg-secondary" id="location">
+  <section class="py-20 px-6 md:px-12 lg:px-20 xl:px-30 bg-bg-secondary relative" id="location">
+    <!-- Top Hill Divider -->
+    <div class="absolute top-0 left-0 overflow-hidden leading-none transform -translate-y-full z-10 w-[calc(100%+1.3px)]">
+        <svg class="relative block w-full h-[40px] md:h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,120 Q600,0 1200,120 V120 H0 Z" class="fill-bg-secondary"></path>
+        </svg>
+    </div>
     <div class="flex flex-col items-center gap-12 max-w-7xl mx-auto w-full">
       
       <!-- Header -->
@@ -91,20 +97,20 @@
         </div>
 
         <!-- Right: Map Embed -->
-        <div class="flex flex-col h-[500px] lg:h-auto min-h-[400px] w-full bg-gray-200 relative overflow-hidden shadow-lg group">
+        <div class="flex flex-col h-[500px] lg:h-auto min-h-[400px] w-full bg-gray-200 border-5 xl:border-8 border-primary relative overflow-hidden shadow-lg group">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.4093867375276!2d115.13083627589578!3d-8.652516691394336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2489823028e3b%3A0x69661414434914c0!2sAvenue%20Fitness%20Canggu!5e0!3m2!1sen!2sid!4v1707577882431!5m2!1sen!2sid" 
                 width="100%" 
                 height="100%" 
-                style="border:0;" 
+                style="" 
                 allowfullscreen="true" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
                 class="lg:grayscale hover:grayscale-0 transition-all duration-700 ease-in-out block"
             ></iframe>
             <div class="flex flex-row w-full h-40">
-                <img src="../assets/images/gym.png" alt="Bar protein" class="w-1/2 object-cover h-full">
-                <img src="../assets/images/gym2.png" alt="Legs Floor" class="w-1/2 object-cover h-full">
+                <img src="../assets/images/gym.png" alt="Bar protein" class="w-1/2 object-cover h-full border-r-5 border-t-5 xl:border-t-8 xl:border-r-8 border-primary">
+                <img src="../assets/images/gym2.png" alt="Legs Floor" class="w-1/2 object-cover h-full border-t-5 xl:border-t-8 border-primary">
             </div>
         </div>
 

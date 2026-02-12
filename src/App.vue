@@ -1,6 +1,6 @@
 <template>
   <div class="bg-bg-white font-body min-h-screen overflow-x-hidden">
-    <!-- <Navbar /> -->
+    <Navbar />
     <main>
       <Hero />
       <Hero2nd />
@@ -11,10 +11,13 @@
       <MealPlan />
       <Facts />
       <Location />
+      <Important />
+      <ReadyToTransform />
       <CTA />
       <CatalogNutrition />
       <Faqs />
       <Services />
+      <BentoGrid />
     </main>
     <Footer />
   </div>
@@ -34,6 +37,9 @@ import CTA from './components/CTA.vue';
 import Faqs from './components/Faqs.vue';
 import Footer from './components/Footer.vue';
 import Location from './components/Location.vue';
+import ReadyToTransform from './components/ReadyToTransform.vue';
+import Important from './components/Important.vue';
 import CatalogNutrition from './components/CatalogNutrition.vue';
 import Services from './components/Services.vue';
+import BentoGrid from './components/BentoGrid.vue';
 </script>

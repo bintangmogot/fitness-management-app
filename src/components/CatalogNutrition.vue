@@ -1,5 +1,17 @@
 <template>
   <section class="bg-bg-white py-20 px-6 lg:px-20 xl:px-32 relative overflow-hidden" id="catalog-nutrition">
+    <!-- Top Diagonal Divider -->
+    <div class="absolute top-0 left-0 scale-y-[-1] w-full overflow-hidden leading-none transform z-10">
+        <svg class="relative block w-[calc(100%+1.3px)] h-[50px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="divider-gradient" x1="0%" y1="0%" x2="80%" y2="0%">
+              <stop offset="20%" stop-color="currentColor" class="text-primary" />
+              <stop offset="150%" stop-color="#001A52" />
+            </linearGradient>
+          </defs>
+          <path d="M0,120 L1200,10 L1200,120 Z" fill="url(#divider-gradient)"></path>
+        </svg>
+    </div>
     <!-- Header -->
     <div class="mb-16 border-l-8 border-primary pl-6 md:pl-10">
       <span class="bg-blue-100 text-primary text-xs font-bold px-3 py-1 uppercase tracking-wider mb-4 inline-block">NUTRITION PLAN</span>

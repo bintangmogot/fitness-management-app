@@ -20,12 +20,13 @@
   /* Primary */
   --color-primary: #0046DE;
   --color-primary-hover: #0037B0;
-
+  
   /* Backgrounds */
   --color-bg-white: #F9F9F9;
   /* Main background */
-  --color-bg-secondary: #F3F4F6;
-  /* Secondary background */
+  /* Main background */
+  --color-bg-secondary: #F0F4F8;
+  /* Secondary background: Cool Blue-Grey */
   --color-card-white: #FFFFFF;
   /* White cards */
 
@@ -36,13 +37,19 @@
   /* Dark cards */
 
   /* Text */
-  --color-text-body: #4B5563;
-  /* Paragraph text */
-  --color-text-muted: #6b7280;
-  --color-text-body-2: #9CA3AF;
+  --color-text-body: #475569;
+  /* Paragraph text: Slate-600 */
+  --color-text-muted: #64748B;
+  /* Slate-500 */
+  --color-text-body-2: #94A3B8;
+  /* Slate-400 */
   /* Accents */
   --color-hover-light: #EFF6FF;
   --color-line: #C2D8F4;
+  --color-accent: #22D3EE;
+  /* Icy Cyan for cold highlights */
+
+
 
   /* === FONTS (Must start with --font-) === */
   /* Usage: font-title, font-heading, font-body */
