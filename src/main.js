@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { createRouter, createWebHistory } from 'vue-router'
+// import { createRouter, createWebHistory } from 'vue-router'
+import router from './router'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import 'flowbite'
@@ -12,10 +13,10 @@ import './assets/css/style.css'
 import App from './App.vue'
 
 // Setup Router (Simple Home Route)
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [{ path: '/', component: App }]
-})
+// const router = createRouter({
+//   history: createWebHistory(),
+//   routes: [{ path: '/', component: App }]
+// })
 
 // Initialize AOS
 AOS.init({

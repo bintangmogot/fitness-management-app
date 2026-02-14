@@ -1,9 +1,9 @@
 <template>
-  <section class="bg-dark-bg py-24 px-6 md:px-12 lg:px-20 xl:px-32 relative overflow-hidden">
+  <section id="consultation" class="bg-dark-bg py-24 xl:py-32 px-6 md:px-12 lg:px-20 xl:px-32 relative overflow-hidden">
     <!-- CTA Banner -->
     <div 
       data-aos="fade-up"
-      class="relative overflow-hidden bg-primary p-8 md:p-14 xl:px-20 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 md:gap-10 group shadow-2xl"
+      class="relative overflow-hidden bg-primary p-8 md:p-14 xl:px-20 lg:py-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 md:gap-10 group shadow-2xl"
     >
       <!-- Background Decorative Elements -->
       <div class="absolute inset-0 bg-linear-to-r from-primary via-primary to-black/40 pointer-events-none"></div>
@@ -11,7 +11,7 @@
 
       <!-- Content -->
       <div class="relative z-10 flex flex-col gap-6 max-w-2xl">
-        <h2 class="text-3xl md:text-7xl xl:text-8xl font-title italic uppercase font-black text-white leading-[0.85] tracking-tighter">
+        <h2 class="text-3xl md:text-7xl  font-title italic uppercase font-black text-white leading-[0.85] tracking-tighter">
           Ready To <br />
           Transform?
         </h2>
@@ -23,7 +23,7 @@
       <!-- Action Button -->
       <div class="relative z-10 shrink-0 w-full lg:w-auto">
         <a 
-          href="https://wa.me/YOUR_NUMBER" 
+          href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20ready%20for%20my%20transformation.%20I'd%20like%20a%20free%20consultation%20to%20start%20my%20fitness%20journey.%20When%20can%20we%20schedule%20one%3F" 
           target="_blank"
           class="bg-white text-primary px-10 py-5 font-heading text-2xl uppercase tracking-widest flex items-center justify-center gap-4 hover:bg-bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] group/btn relative overflow-hidden"
         >
@@ -37,7 +37,7 @@
     </div>
 
     <!-- Banner Carousel Below -->
-    <div class="mt-10 lg:mt-20 overflow-hidden relative" data-aos="fade-up" data-aos-delay="200">
+    <div class="mt-10 lg:mt-20 overflow-hidden  relative" data-aos="fade-up" data-aos-delay="200">
         <!-- Overlay for fade edges -->
         <div class="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-dark-bg to-transparent z-10"></div>
         <div class="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-dark-bg to-transparent z-10"></div>

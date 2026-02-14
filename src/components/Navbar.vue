@@ -20,9 +20,9 @@
         </div>
     
         <!-- Desktop Navbar -->
-        <div class="hidden xl:flex xl:gap-x-12 items-center">
-          <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-button font-heading text-dark-bg hover:text-primary">{{ item.name }}</a>
-          <a href="#" class="bg-primary px-8 py-3 text-button font-heading text-white shadow-card hover:bg-primary-hover transition-all">BOOK NOW</a>
+        <div class="hidden xl:flex xl:gap-x-8 items-center">
+          <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-button-sm font-heading text-dark-bg hover:text-primary">{{ item.name }}</a>
+          <a href="#programs" class="bg-primary px-6 py-3 text-button-sm font-heading text-white shadow-card hover:bg-primary-hover transition-all">BOOK NOW</a>
         </div>
     </nav>
     
@@ -46,7 +46,7 @@
               <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block px-3 py-2 text-button-sm font-heading text-dark-bg hover:bg-bg-secondary">{{ item.name }}</a>
             </div>
             <div class="flex py-6">
-              <a href="#" class="w-full bg-primary px-8 py-3 text-center text-button-sm font-heading text-white shadow-card hover:bg-primary-hover transition-all">BOOK NOW</a>
+              <a href="#programs" class="w-full bg-primary px-8 py-3 text-center text-button-sm font-heading text-white shadow-card hover:bg-primary-hover transition-all">BOOK NOW</a>
             </div>
           </div>
         </div>
@@ -61,11 +61,13 @@ import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 const navigation = [
-  { name: 'PERSONAL TRAINING', href: '#' },
-  { name: 'CONSULTATION', href: '#' },
-  { name: 'ABOUT', href: '#' },
-  { name: 'TESTIMONIALS', href: '#' },
-  { name: 'FOOD', href: '#' },
+  { name: 'ABOUT', href: '#about' },
+  { name: 'GALLERY', href: '#gallery' },
+  { name: 'TRANSFORMS', href: '#transforms' },
+  { name: 'SERVICES', href: '#services'},
+  { name: 'PROGRAMS', href: '#programs' },
+  { name: 'FOOD', href: '#food' },
+  { name: 'CONSULTATION', href: '#consultation' },
 ]
 
 const mobileMenuOpen = ref(false)

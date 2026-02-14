@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-bg-white py-20 px-6 lg:px-20 xl:px-32 relative overflow-hidden" id="training-packages" data-aos="fade-up">
+  <section class="bg-bg-white py-20 px-6 lg:px-20 xl:px-32 relative overflow-hidden" id="programs" data-aos="fade-up">
     <!-- Header -->
     <div class="text-center mb-16">
       <h3 class="text-primary font-title italic font-black text-xl md:text-2xl tracking-widest mb-2">INVEST IN YOURSELF</h3>
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Pricing Cards -->
-    <div class="flex flex-row gap-8 mx-auto items-stretch xl:justify-center overflow-x-auto snap-x snap-mandatory px-4 lg:px-0 scrollbar-hide pb-12 pt-10">
+    <div class="flex flex-row gap-8 mx-auto items-stretch 2xl:justify-center overflow-x-auto snap-x snap-mandatory px-4 lg:px-0 scrollbar-hide pb-12 pt-10">
       <!-- Starter Card -->
       <div class="bg-card-white p-8 md:p-10 border border-t-4 border-gray-300 hover:border-primary shadow-card hover:shadow-card-hover transition-all hover:-translate-y-2 flex flex-col h-full relative group shrink-0 snap-center">
         <div class="mb-8">
@@ -54,7 +54,7 @@
           </li>
         </ul>
 
-        <a href="https://wa.me/yourphonenumber" target="_blank" class="block w-full border-2 border-dark-bg text-dark-bg text-center py-4 font-heading text-xl tracking-wider hover:bg-white hover:text-primary hover:border-primary hover:shadow-lg transition-all uppercase">
+        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20interested%20in%20the%20STARTER%20package%20(The%20Kickstart)%20priced%20at%207%20Million%20IDR.%20Can%20you%20tell%20me%20more%3F" target="_blank" class="block w-full border-2 border-dark-bg text-dark-bg text-center py-4 font-heading text-xl tracking-wider hover:bg-white hover:text-primary hover:border-primary hover:shadow-lg transition-all uppercase">
           Book via Whatsapp
         </a>
       </div> 
@@ -99,7 +99,7 @@
           </li>
         </ul>
 
-        <a href="https://wa.me/yourphonenumber" target="_blank" class="block w-full border-2 border-dark-bg text-dark-bg text-center py-4 font-heading text-xl tracking-wider hover:bg-white hover:text-primary hover:border-primary hover:shadow-lg transition-all uppercase">
+        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20interested%20in%20the%20STARTER%20package%20(The%20Kickstart)%20priced%20at%207%20Million%20IDR.%20Could%20you%20share%20the%20program%20details%3F" target="_blank" class="block w-full border-2 border-dark-bg text-dark-bg text-center py-4 font-heading text-xl tracking-wider hover:bg-white hover:text-primary hover:border-primary hover:shadow-lg transition-all uppercase">
           Book via Whatsapp
         </a>
       </div>
@@ -147,7 +147,7 @@
           </li>
         </ul>
 
-        <a href="https://wa.me/yourphonenumber" target="_blank" class="block w-full bg-primary border-2 border-primary text-white text-center py-4 font-heading text-xl tracking-wider hover:bg-primary-hover hover:border-primary-hover transition-colors uppercase shadow-lg">
+        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I%20want%20to%20sign%20up%20for%20the%20COMMIT%20package%20(Most%20Popular)!%20I'm%20ready%20for%20a%20total%20transformation.%20When%20can%20I%20start%3F" target="_blank" class="block w-full bg-primary border-2 border-primary text-white text-center py-4 font-heading text-xl tracking-wider hover:bg-primary-hover hover:border-primary-hover transition-colors uppercase shadow-lg">
           Book via Whatsapp
         </a>
       </div>
@@ -193,7 +193,7 @@
           </li>
         </ul>
 
-        <a href="https://wa.me/yourphonenumber" target="_blank" class="block w-full border-2 border-dark-bg text-dark-bg text-center py-4 font-heading text-xl tracking-wider hover:bg-white hover:text-primary hover:border-primary hover:shadow-lg transition-all uppercase">
+        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20interested%20in%20the%20ELITE%20package%20(The%20Lifestyle)%20priced%20at%2015%20Million%20IDR.%20I%20want%20the%20most%20complete%20program%20for%20maximum%20results!" target="_blank" class="block w-full border-2 border-dark-bg text-dark-bg text-center py-4 font-heading text-xl tracking-wider hover:bg-white hover:text-primary hover:border-primary hover:shadow-lg transition-all uppercase">
           Book via Whatsapp
         </a>
       </div>

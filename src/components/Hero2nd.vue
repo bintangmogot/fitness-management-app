@@ -30,8 +30,8 @@
           <h4 class="text-dark-bg font-body text-xl lg:text-2xl leading-relaxed uppercase italic">Transform Your Body, Elevate Your Life</h4>
           
           <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-6 w-full mt-4">
-            <a href="#" class="bg-primary px-10 py-4 text-button text-center font-heading text-white shadow-card hover:bg-primary-hover transition-all hover-lift w-full sm:w-auto">BOOK YOUR SESSION</a>
-            <a href="#" class="text-button text-center font-heading text-dark-bg hover:text-primary hover:bg-white hover-lift transition-colors border-2 border-dark-bg hover:border-primary px-10 py-4 w-full sm:w-auto">LEARN MORE</a>
+            <a href="#programs" class="bg-primary px-10 py-4 text-button text-center font-heading text-white shadow-card hover:bg-primary-hover transition-all hover-lift w-full sm:w-auto">BOOK YOUR SESSION</a>
+            <a href="#about" class="text-button text-center font-heading text-dark-bg hover:text-primary hover:bg-white hover-lift transition-colors border-2 border-dark-bg hover:border-primary px-10 py-4 w-full sm:w-auto">LEARN MORE</a>
           </div>
        </div>
     </div>
