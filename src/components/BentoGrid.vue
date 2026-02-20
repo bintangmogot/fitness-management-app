@@ -12,7 +12,7 @@
                     class="w-full h-full object-cover"
                     autoplay muted loop playsinline
                     preload="metadata"
-                    poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200"
+                    :poster="videos[0].poster"
                 >
                     <source :src="getMobileBgSrc()" type="video/mp4">
                 </video>
@@ -237,9 +237,9 @@ function setupDesktopObserver() {
                     }
                     video.play().catch(() => {}) // Silently handle autoplay block
                 }, delay)
-            } else {
-                // Pause videos that are off-screen to free resources
-                video.pause()
+                // Only trigger load+play when entering viewport (no pause on exit!)
+                // Reason: hover's scale-105 CSS transform briefly triggers an 'exit'
+                // event in the observer — causing video.pause() to fire incorrectly.
             }
         })
     }, {
@@ -261,31 +261,13 @@ const mobileScrollContainer = ref(null)
 let mobileScrollTimeout = null
 
 function setupMobileObserver() {
-    // Lazy-load mobile videos as they enter the scroll view
-    mobileObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const video = entry.target
-            if (entry.isIntersecting) {
-                // Load the video src if not loaded yet
-                if (video.dataset.src && !video.getAttribute('src')) {
-                    // The <source> tag already has the src,
-                    // just trigger load & play when visible
-                    video.load()
-                }
-            }
-        })
-    }, {
-        root: mobileScrollContainer.value,
-        rootMargin: '100px 0px',
-        threshold: 0.1
-    })
-
     nextTick(() => {
+        // Preload ALL mobile videos immediately (they have preload="none" so this is safe)
         mobileVideoRefs.value.forEach(video => {
-            if (video) mobileObserver.observe(video)
+            if (video) video.load()
         })
-        // Initial: play & unmute the first (center) video
-        updateActiveMobileVideo(0)
+        // Wait a tick for load() to register, then activate first video
+        setTimeout(() => updateActiveMobileVideo(0), 200)
     })
 }
 
@@ -336,16 +318,24 @@ function onMobileScroll() {
 }
 
 function updateActiveMobileVideo(newIndex) {
-    // Pause + mute all mobile videos
     mobileVideoRefs.value.forEach((video, i) => {
         if (!video) return
         if (i === newIndex) {
             video.muted = false
             video.volume = 0.4
-            video.play().catch(() => {})
+            if (video.readyState >= 2) {
+                // Already has data — play immediately
+                video.play().catch(() => {})
+            } else {
+                // Not loaded yet — load first, then play when ready
+                video.load()
+                video.addEventListener('canplay', () => {
+                    video.play().catch(() => {})
+                }, { once: true })
+            }
         } else {
             video.muted = true
-            video.pause()
+            if (!video.paused) video.pause()
         }
     })
     activeMobileIndex.value = newIndex
