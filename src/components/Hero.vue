@@ -18,7 +18,7 @@
           </p>
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
           <a href="#programs" class="bg-secondary px-8 py-3 text-button font-heading text-secondary-content shadow-card hover:bg-secondary-focus transition-all hover-lift w-full sm:w-auto">BOOK YOUR SESSION</a>
-          <a href="#about" class="text-button font-heading text-white hover:text-secondary-content hover:bg-secondary hover-lift transition-all border border-secondary px-8 py-3 w-full sm:w-auto">LEARN MORE</a>
+          <a href="#about" class="text-button font-heading text-secondary hover:text-secondary hover:bg-white  hover-lift transition-all border border-secondary px-8 py-3 w-full sm:w-auto">LEARN MORE</a>
         </div>
       </div>
     </div>
