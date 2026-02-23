@@ -26,16 +26,16 @@
   --color-primary-focus: #6B52FF;
 
   /* Secondary — Neon Teal */
-  --color-secondary: #15F5BA;
-  --color-secondary-content: #0D1F1A;
-  --color-secondary-focus: #0DD4A0;
+--color-secondary: #38E5B6;
+  --color-secondary-content: #0A3326;
+  --color-secondary-focus: #25C79A;
 
 
-  /* Base — Soft Lavender (terang, berwarna, tidak plain putih) */
-  --color-base-100: #F0F3FF;      /* Background utama — soft lavender */
-  --color-base-200: #E4E8FF;      /* Section alternatif — medium lavender */
-  --color-base-300: #C8CFFF;      /* Border/divider — deeper lavender */
-  --color-base-content: #211951;  /* Teks utama — deep purple */
+/* Base — Vibrant Lavender */
+  --color-base-100: #E2DCFF;      /* Background utama — lavender yang lebih nyata */
+  --color-base-200: #D1C7FF;      /* Section alternatif — lavender medium */
+  --color-base-300: #BDB0FF;      /* Border/divider — ungu pastel */
+  --color-base-content: #1A114A;  /* Teks utama — deep violet agar kontras tetap tinggi */
 
   /* Neutral — Deep Purple (bukan hitam!) */
   --color-neutral: #211951;

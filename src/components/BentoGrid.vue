@@ -102,7 +102,7 @@
                         ></video>
 
                         <!-- Dark Overlay -->
-                        <div class="absolute inset-0 bg-neutral-content/40 group-hover:bg-neutral/10 transition-all duration-300"></div>
+                        <div class="absolute inset-0 bg-neutral/50 group-hover:bg-neutral/10 transition-all duration-300"></div>
 
                         <!-- Label -->
                         <div class="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-card-dark/80 via-dark-bg/40 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
