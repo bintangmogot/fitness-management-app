@@ -5,7 +5,7 @@
         <!-- Mobile/Tab View: Framed Design -->
         <div class="relative group w-full max-w-[400px] max-h-[2000px] lg:max-w-none lg:w-full lg:h-full mx-auto lg:mx-0">
             <!-- Bingkai Biru: Hanya muncul di mobile/tab -->
-            <div class="lg:hidden absolute -top-4 -left-4 md:-top-6 md:-left-6 w-full h-full border-2 border-accent z-0"></div>
+            <div class="lg:hidden absolute -top-4 -left-4 md:-top-6 md:-left-6 w-full h-full border-2 border-primary z-0"></div>
             
             <!-- Foto Coach -->
             <img 
@@ -30,7 +30,7 @@
           <h4 class="text-base-content/80 font-body text-xl lg:text-2xl leading-relaxed uppercase italic">Transform Your Body, Elevate Your Life</h4>
           
           <div class="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-6 w-full mt-4">
-            <a href="#programs" class="bg-primary px-10 py-4 text-button text-center font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift w-full sm:w-auto">BOOK YOUR SESSION</a>
+            <a href="#programs" class="bg-secondary px-10 py-4 text-button text-center font-heading text-secondary-content shadow-card hover:bg-secondary-focus transition-all hover-lift w-full sm:w-auto">BOOK YOUR SESSION</a>
             <a href="#about" class="text-button text-center font-heading text-base-content hover:text-secondary-content hover:bg-secondary hover-lift transition-colors border-2 border-secondary hover:border-secondary px-10 py-4 w-full sm:w-auto">LEARN MORE</a>
           </div>
        </div>

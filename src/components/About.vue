@@ -4,7 +4,7 @@
       <!-- Left: Image -->
       <div class="relative group min-w-[320px] xl:min-w-[450px] max-w-[400px]">
           <!-- Kotak Garis (Diletakkan di belakang dengan bingkai biru) -->
-        <div class="absolute -top-6 -left-6 w-full h-full border-2 border-accent z-0"></div>
+        <div class="absolute -top-6 -left-6 w-full h-full border-2 border-primary z-0"></div>
         
         <!-- Foto Coach Yohan (Diletakkan di depan) -->
         <img 
@@ -44,8 +44,8 @@
           </div>
 
           <!-- Feature 3 -->
-          <div class="flex items-center gap-4 bg-base-100 p-4 border-l-4 border-accent shadow-sm hover:shadow-md transition-shadow">
-              <HomeModernIcon class="w-8 h-8 text-accent shrink-0" />
+          <div class="flex items-center gap-4 bg-base-100 p-4 border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
+              <HomeModernIcon class="w-8 h-8 text-primary shrink-0" />
               <div>
                 <h4 class="font-anton uppercase text-lg text-base-content/80">Private Gym Access</h4>
                 <p class="text-xs text-base-content/60 uppercase tracking-wider font-semibold">Premium Facilities</p>
@@ -53,11 +53,11 @@
           </div>
 
             <!-- Feature 4 (Accent Box) -->
-            <div class="flex items-center gap-4 bg-accent p-4 shadow-card hover:shadow-accent transition-colors">
-              <ClockIcon class="w-8 h-8 text-accent-content shrink-0" />
+            <div class="flex items-center gap-4 bg-primary p-4 shadow-card hover:shadow-card-hover transition-colors">
+              <ClockIcon class="w-8 h-8 text-primary-content shrink-0" />
               <div>
-                <h4 class="font-anton uppercase text-lg text-accent-content">10 Years Experience</h4>
-                <p class="text-xs text-accent-content/70 uppercase tracking-wider font-semibold">Expert Coaching</p>
+                <h4 class="font-anton uppercase text-lg text-primary-content">10 Years Experience</h4>
+                <p class="text-xs text-primary-content/70 uppercase tracking-wider font-semibold">Expert Coaching</p>
               </div>
           </div>
         </div>

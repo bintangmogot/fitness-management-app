@@ -466,10 +466,10 @@ onUnmounted(() => {
     overflow: hidden;
     cursor: default;
     border-left: 3px solid var(--color-primary);
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-right: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    background: #111;
+    border-top: 1px solid rgba(131,111,255,0.1);
+    border-right: 1px solid rgba(131,111,255,0.05);
+    border-bottom: 1px solid rgba(131,111,255,0.05);
+    background: #211951;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -478,8 +478,8 @@ onUnmounted(() => {
 
     z-index: 5;
     box-shadow: 
-        0 0 30px rgba(0,70,222,0.2),
-        inset 0 0 60px rgba(0,70,222,0.05);
+        0 0 30px rgba(131,111,255,0.3),
+        inset 0 0 60px rgba(131,111,255,0.08);
 }
 
 /* GPU acceleration for video elements */

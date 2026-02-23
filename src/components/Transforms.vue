@@ -127,7 +127,7 @@
 
       <!-- CTA -->
       <div class="flex flex-col items-center mt-4">
-        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I%20want%20to%20start%20today.%20Please%20help%20me%20choose%20the%20best%20program%20for%20my%20goals.%20Thank%20you!%0AI'm%20interested%20in%20your%20program." target="_blank" class="bg-primary px-8 py-3 text-button font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift w-full sm:w-auto">START YOUR JOURNEY</a>
+        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I%20want%20to%20start%20today.%20Please%20help%20me%20choose%20the%20best%20program%20for%20my%20goals.%20Thank%20you!%0AI'm%20interested%20in%20your%20program." target="_blank" class="bg-secondary px-8 py-3 text-button font-heading text-secondary-content shadow-card hover:bg-secondary-focus transition-all hover-lift w-full sm:w-auto">START YOUR JOURNEY</a>
       </div>
 
     </div>

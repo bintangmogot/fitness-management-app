@@ -38,8 +38,8 @@
                         </div>
                         
                         <!-- Price Badge (Moved outside overflow-hidden) -->
-                        <div class="absolute -bottom-6 right-6 w-16 h-16 bg-white dark:bg-base-300 rounded-full flex items-center justify-center shadow-lg z-10">
-                            <span class="text-accent font-anton text-xl">{{ meal.price }}</span>
+                        <div class="absolute -bottom-6 right-6 w-16 h-16 bg-primary dark:bg-base-300 rounded-full flex items-center justify-center shadow-lg z-10">
+                            <span class="text-secondary font-anton text-xl">{{ meal.price }}</span>
                         </div>
                     </div>
 
@@ -66,18 +66,18 @@
                             
                             <!-- Carbs - Delay 75ms -->
                             <div class="relative overflow-hidden py-2 px-1 text-center">
-                                <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out delay-75"></div>
+                                <div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out delay-75"></div>
                                 <div class="relative z-10">
-                                    <span class="block text-accent group-hover:text-white transition-colors duration-100 delay-75 font-bold font-anton text-lg">{{ meal.macros.carb }}</span>
+                                    <span class="block text-primary group-hover:text-white transition-colors duration-100 delay-75 font-bold font-anton text-lg">{{ meal.macros.carb }}</span>
                                     <span class="block text-xs text-base-content group-hover:text-white/80 transition-colors duration-100 delay-75 font-bold uppercase">CARB</span>
                                 </div>
                             </div>
 
                             <!-- Fat - Delay 150ms -->
                             <div class="relative overflow-hidden py-2 px-1 text-center">
-                                <div class="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out delay-150"></div>
+                                <div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out delay-150"></div>
                                 <div class="relative z-10">
-                                    <span class="block text-secondary group-hover:text-white transition-colors duration-100 delay-150 font-bold font-anton text-lg">{{ meal.macros.fat }}</span>
+                                    <span class="block text-primary group-hover:text-white transition-colors duration-100 delay-150 font-bold font-anton text-lg">{{ meal.macros.fat }}</span>
                                     <span class="block text-xs text-base-content group-hover:text-white/80 transition-colors duration-100 delay-150 font-bold uppercase">FAT</span>
                                 </div>
                             </div>

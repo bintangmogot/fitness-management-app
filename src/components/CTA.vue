@@ -1,9 +1,13 @@
 ﻿<template>
-  <section class="bg-primary py-24 px-6 md:px-12 relative overflow-hidden flex flex-col items-center justify-center text-center gap-8">
+  <section class="bg-neutral py-24 px-6 md:px-12 relative overflow-hidden flex flex-col items-center justify-center text-center gap-8">
     
     <!-- Background Gradient Overlay -->
-    <div class="absolute inset-0 bg-linear-to-br from-primary from-50% to-[#001A52] to-100% opacity-90 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-linear-to-br from-neutral from-50% to-primary/40 to-100% opacity-90 pointer-events-none"></div>
     
+    <!-- Decorative glows -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/15 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+
     <!-- Content Wrapper -->
     <div class="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto">
       
@@ -15,7 +19,7 @@
       <!-- Main Title -->
       <h2 class="text-6xl md:text-8xl lg:text-9xl font-anton font-black uppercase leading-none text-white tracking-tight">
         Ready To <br />
-        <span class="text-transparent bg-clip-text bg-linear-to-br from-white to-blue-200">Transform?</span>
+        <span class="text-transparent bg-clip-text bg-linear-to-br from-primary to-secondary">Transform?</span>
       </h2>
 
       <!-- Subtitle -->

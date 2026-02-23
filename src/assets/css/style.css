@@ -20,59 +20,36 @@
   prefersdark: false;
   color-scheme: light;
 
-  /* Primary — Bold Blue */
-  --color-primary: #0046DE;
-  --color-primary-content: #f5f5f5;
+  /* Primary — Vibrant Purple */
+  --color-primary: #836FFF;
+  --color-primary-content: #F0F3FF;
+  --color-primary-focus: #6B52FF;
 
-  /* Secondary — Vibrant Magenta/Pink */
-  --color-secondary: #FE0075;
-  --color-secondary-content: #FFF5F9 ;
-  --color-accent: #089872 ;
-  --color-accent-content: #ffffff;
+  /* Secondary — Neon Teal */
+  --color-secondary: #15F5BA;
+  --color-secondary-content: #0D1F1A;
+  --color-secondary-focus: #0DD4A0;
 
 
-  /* Base — Warm Ivory (premium, nyaman di mata) */
-  --color-base-100: #FAF7F2;      /* Background utama — warm ivory */
-  --color-base-200: #F0ECE3;      /* Section alternatif — sandy beige */
-  --color-base-300: #F0F4F8;      /* Border/divider — warm stone */
-  --color-base-content: #1A1A2E;  /* Teks utama — deep navy */
+  /* Base — Soft Lavender (terang, berwarna, tidak plain putih) */
+  --color-base-100: #F0F3FF;      /* Background utama — soft lavender */
+  --color-base-200: #E4E8FF;      /* Section alternatif — medium lavender */
+  --color-base-300: #C8CFFF;      /* Border/divider — deeper lavender */
+  --color-base-content: #211951;  /* Teks utama — deep purple */
 
-  /* Neutral — Untuk section gelap (footer, services, dll) */
-  --color-neutral: #1A1A2E;
-  --color-neutral-content: #2A2A4A;
+  /* Neutral — Deep Purple (bukan hitam!) */
+  --color-neutral: #211951;
+  --color-neutral-content: #F0F3FF;
 
   /* Info / Success / Warning / Error */
-  --color-info: #3B82F6;
-  --color-info-content: #ffffff;
-  --color-success: #22C55E;
-  --color-success-content: #ffffff;
-  --color-warning: #F59E0B;
-  --color-warning-content: #ffffff;
-  --color-error: #EF4444;
-  --color-error-content: #ffffff;
-}
-@plugin "daisyui/theme"{
-  name: "light";
-  default: true;
-  prefersdark: false;
-  color-scheme: light;
-
-  /* Primary */
-  --color-primary: #0046DE;
-  --color-primary-content: #f5f5f5;
-  --color-primary-focus: #0037B0;
-
-  /* Base (Dynamic Backgrounds & Text) */
-  --color-base-100: #F9F9F9;      /* Background utama halaman & card ringan */
-  --color-base-200: #F0F4F8;      /* Background section alternatif */
-  --color-base-300: #E2E8F0;      /* Border/divider ringan */
-  --color-base-content: #0f0f23;  /* Warna teks utama */
-  --color-secondary: #eff6ff;
-  --color-secondary-content: #0f0f23;
-
-  /* Neutral (Selalu gelap, tidak berubah antar tema) */
-  --color-neutral: #0F0F23;
-  --color-neutral-content: #1E1E45;
+  --color-info: #836FFF;
+  --color-info-content: #F0F3FF;
+  --color-success: #15F5BA;
+  --color-success-content: #0D1F1A;
+  --color-warning: #F5A623;
+  --color-warning-content: #211951;
+  --color-error: #FF4D6A;
+  --color-error-content: #F0F3FF;
 
   /* Standard DaisyUI Vars */
   --radius-selector: 1rem;
@@ -85,43 +62,43 @@
   --noise: 0;
 }
 
+
 @plugin "daisyui/theme"{
   name: "dark";
   default: false;
   prefersdark: true;
   color-scheme: dark;
 
-  /* Primary (Lighter Blue for Dark Mode) */
-  --color-primary: #0046DE;
-  --color-primary-content: #ffffff;
+  /* Primary — Purple lebih terang di dark mode */
+  --color-primary: #A090FF;
+  --color-primary-content: #F0F3FF;
+  --color-primary-focus: #836FFF;
 
-  /* Secondary — Lighter Pink for dark backgrounds */
-  --color-secondary: #FF4D94;
-  --color-secondary-content: #ffffff;
+  /* Secondary — Teal tetap neon di dark */
+  --color-secondary: #15F5BA;
+  --color-secondary-content: #0D1F1A;
+  --color-secondary-focus: #58FFD3;
 
-  /* Accent — Brighter Gold for dark backgrounds */
-  --color-accent: #15F5BA;
-  --color-accent-content: #1A1A2E;
 
-  /* Base (Dark backgrounds) */
-  --color-base-100: #0F0F23;      /* Background utama */
-  --color-base-200: #171736;      /* Section alternatif */
-  --color-base-300: #1E1E45;      /* Border/divider */
-  --color-base-content: #F5F5F5;  /* Teks utama */
+  /* Base — Deep Purple (bukan hitam polos!) */
+  --color-base-100: #211951;      /* Background utama — deep purple */
+  --color-base-200: #2D2268;      /* Section alternatif — medium purple */
+  --color-base-300: #3A2B7F;      /* Border/divider — lighter purple */
+  --color-base-content: #F0F3FF;  /* Teks utama — soft lavender */
 
-  /* Neutral (Tetap gelap di dark mode juga) */
-  --color-neutral: #0F0F23;
-  --color-neutral-content: #1E1E45;
+  /* Neutral — Paling gelap, near-black purple */
+  --color-neutral: #150E3A;
+  --color-neutral-content: #F0F3FF;
 
   /* Info / Success / Warning / Error */
-  --color-info: #60A5FA;
-  --color-info-content: #ffffff;
-  --color-success: #4ADE80;
-  --color-success-content: #ffffff;
-  --color-warning: #FBBF24;
-  --color-warning-content: #1A1A2E;
-  --color-error: #F87171;
-  --color-error-content: #ffffff;
+  --color-info: #A090FF;
+  --color-info-content: #F0F3FF;
+  --color-success: #15F5BA;
+  --color-success-content: #0D1F1A;
+  --color-warning: #FFD166;
+  --color-warning-content: #211951;
+  --color-error: #FF6B6B;
+  --color-error-content: #F0F3FF;
 
   --radius-selector: 1rem;
   --radius-field: 0.25rem;
@@ -156,8 +133,8 @@
   --color-accent-content: var(--color-accent-content);
 
   /* === SUPPORT === */
-  --color-hover-light: #EFF6FF;
-  --color-line: #C2D8F4;
+  --color-hover-light: #E4E8FF;
+  --color-line: #C8CFFF;
 
   /* === FONTS (Must start with --font-) === */
   /* Usage: font-title, font-heading, font-body */
@@ -205,10 +182,11 @@
 
 
   /* === SHADOWS (Must start with --shadow-) === */
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 8px 24px rgba(0, 70, 222, 0.15);
-  --shadow-secondary: 0 8px 24px rgba(254, 0, 117, 0.15);
-  --shadow-accent: 0 8px 24px rgba(220, 165, 77, 0.15);
+  --shadow-card: 0 2px 8px rgba(33, 25, 81, 0.08);
+  --shadow-card-hover: 0 8px 24px rgba(131, 111, 255, 0.25);
+  --shadow-secondary: 0 8px 24px rgba(21, 245, 186, 0.25);
+  --shadow-accent: 0 8px 24px rgba(184, 172, 255, 0.35);
+  --shadow-primary: 0 8px 24px rgba(131, 111, 255, 0.35);
 
   /* === ANIMATIONS (Must start with --animate-) === */
   --animate-float: float 3s ease-in-out infinite;

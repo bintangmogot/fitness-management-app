@@ -193,7 +193,7 @@
           </li>
         </ul>
 
-        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20interested%20in%20the%20ELITE%20package%20(The%20Lifestyle)%20priced%20at%2015%20Million%20IDR.%20I%20want%20the%20most%20complete%20program%20for%20maximum%20results!" target="_blank" class="block w-full border-2 border-primary text-base-content/80 text-center py-4 font-heading text-xl tracking-wider hover:bg-base-100 hover:text-primary hover:border-primary hover:shadow-lg transition-all uppercase">
+        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20interested%20in%20the%20ELITE%20package%20(The%20Lifestyle)%20priced%20at%2015%20Million%20IDR.%20I%20want%20the%20most%20complete%20program%20for%20maximum%20results!" target="_blank" class="block w-full border-2 border-secondary text-base-content/80 text-center py-4 font-heading text-xl tracking-wider hover:bg-secondary hover:text-secondary-content hover:border-secondary hover:shadow-lg transition-all uppercase">
           Book via Whatsapp
         </a>
       </div>
@@ -202,8 +202,8 @@
 
     <!-- Bottom Info -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-20">
-      <div class="bg-base-100 border-l-4 border-accent p-6 md:p-8 shadow-sm flex items-start gap-4 hover:shadow-md transition-all">
-        <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0">
+      <div class="bg-base-100 border-l-4 border-primary p-6 md:p-8 shadow-sm flex items-start gap-4 hover:shadow-md transition-all">
+        <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>

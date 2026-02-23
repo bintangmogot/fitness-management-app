@@ -91,7 +91,7 @@
             </div>
             
             
-            <a href="https://www.google.com/maps/place/?q=place_id:ChIJO45gI5gk0i0RwBRJQ0QUZmk" target="_blank" rel="noopener noreferrer" class="mt-4 w-full text-center bg-primary text-primary-content py-3 font-heading uppercase tracking-wider hover:bg-primary-focus transition-colors duration-300">
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJO45gI5gk0i0RwBRJQ0QUZmk" target="_blank" rel="noopener noreferrer" class="mt-4 w-full text-center bg-secondary text-secondary-content py-3 font-heading uppercase tracking-wider hover:bg-secondary-focus transition-colors duration-300">
                 Get Directions
             </a>
 
