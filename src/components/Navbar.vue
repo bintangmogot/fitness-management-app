@@ -151,7 +151,7 @@ const toggleTheme = (e) => {
 
 onMounted(() => {
   // Selalu mulai Light Mode, apapun settingan browser user
-  document.documentElement.setAttribute('data-theme', 'cupcake');
+  document.documentElement.setAttribute('data-theme', 'light');
   isDark.value = false;
 })
 // ============================================================
