@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <section class="relative overflow-hidden" id="gallery">
 
         <!-- ======================= -->
@@ -16,7 +16,7 @@
                 >
                     <source :src="getMobileBgSrc()" type="video/mp4">
                 </video>
-                <div class="absolute inset-0 bg-dark-bg/85"></div>
+                <div class="absolute inset-0 bg-neutral/85"></div>
             </div>
 
             <!-- Overlay Content -->
@@ -25,11 +25,11 @@
                 <h2 class="text-5xl md:text-7xl text-white font-anton font-black uppercase leading-tight mb-6">
                     15 <span class="text-primary">Videos.</span>
                 </h2>
-                <p class="text-gray-300 font-body text-md md:text-lg max-w-md mx-auto mb-8 leading-relaxed">
-                    12 years of training, 5 years of coaching — every video is real proof of dedication and transformation built alongside our members.
+                <p class="text-base-content/30 font-body text-md md:text-lg max-w-md mx-auto mb-8 leading-relaxed">
+                    12 years of training, 5 years of coaching â€” every video is real proof of dedication and transformation built alongside our members.
                 </p>
 
-                <!-- Mobile Horizontal Scroll — center video plays with sound -->
+                <!-- Mobile Horizontal Scroll â€” center video plays with sound -->
                 <div 
                     ref="mobileScrollContainer"
                     class="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory -mx-6 px-6 scrollbar-hide"
@@ -54,7 +54,7 @@
                         <div class="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-black/80 to-transparent">
                             <span class="text-white text-xs font-heading tracking-wider uppercase">{{ video.label }}</span>
                         </div>
-                        <!-- Border accent — thicker when active -->
+                        <!-- Border accent â€” thicker when active -->
                         <div class="absolute top-0 left-0 h-full bg-primary transition-all duration-300" :class="activeMobileIndex === index ? 'w-1.5' : 'w-1 opacity-50'"></div>
                         <!-- Sound indicator -->
                         <div v-if="activeMobileIndex === index" class="absolute top-2 right-2 w-6 h-6 bg-primary/80 flex items-center justify-center">
@@ -69,15 +69,15 @@
         <!-- DESKTOP VIEW          -->
         <!-- Full 10-column Bento  -->
         <!-- ===================== -->
-        <div class="hidden lg:block py-20 px-6 lg:px-20 xl:px-30 bg-bg-secondary">
+        <div class="hidden lg:block py-20 px-6 lg:px-20 xl:px-30 bg-base-200">
             <div class="flex flex-col items-center gap-12">
                 <!-- Header -->
                 <div class="flex flex-col items-center gap-4 text-center">
-                    <h2 class="text-5xl md:text-7xl text-text-title font-anton font-black uppercase leading-tight">
+                    <h2 class="text-5xl md:text-7xl text-base-content font-anton font-black uppercase leading-tight">
                         The <span class="text-primary">Gallery.</span>
                     </h2>
-                    <p class="text-md md:text-lg text-text-body font-body font-normal leading-relaxed max-w-2xl">
-                        12 years of training, 5 years of coaching — every video is real proof of dedication and transformation built alongside our members. Hover to unmute.
+                    <p class="text-md md:text-lg text-base-content/80 font-body font-normal leading-relaxed max-w-2xl">
+                        12 years of training, 5 years of coaching â€” every video is real proof of dedication and transformation built alongside our members. Hover to unmute.
                     </p>
                 </div>
 
@@ -90,7 +90,7 @@
                         @mouseenter="handleHover(index, true)"
                         @mouseleave="handleHover(index, false)"
                     >
-                        <!-- Video — preload="none", loaded via IntersectionObserver -->
+                        <!-- Video â€” preload="none", loaded via IntersectionObserver -->
                         <video
                             :ref="el => { if (el) videoRefs[index] = el }"
                             class="bento-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -102,7 +102,7 @@
                         ></video>
 
                         <!-- Dark Overlay -->
-                        <div class="absolute inset-0 bg-card-dark/40 group-hover:bg-dark-bg/10 transition-all duration-300"></div>
+                        <div class="absolute inset-0 bg-neutral-content/40 group-hover:bg-neutral/10 transition-all duration-300"></div>
 
                         <!-- Label -->
                         <div class="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-card-dark/80 via-dark-bg/40 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -134,7 +134,7 @@ let desktopObserver = null
 let mobileObserver = null
 
 // ==========================================
-// VIDEO DATA — with adaptive resolution per cell size
+// VIDEO DATA â€” with adaptive resolution per cell size
 // ==========================================
 // Cell sizes:  large (4 col) => w_400, medium (3 col) => w_300, small (2 col) => w_250
 // All: fps_20 for smooth but lightweight, du_8 for short loops, f_auto for best codec
@@ -219,7 +219,7 @@ function getMobileBgSrc() {
 }
 
 // ==========================================
-// INTERSECTION OBSERVER — Staggered Loading
+// INTERSECTION OBSERVER â€” Staggered Loading
 // ==========================================
 function setupDesktopObserver() {
     desktopObserver = new IntersectionObserver((entries) => {
@@ -237,9 +237,9 @@ function setupDesktopObserver() {
                     }
                     video.play().catch(() => {}) // Silently handle autoplay block
                 }, delay)
-            } else {
-                // Pause videos that are off-screen to free resources
-                video.pause()
+                // Only trigger load+play when entering viewport (no pause on exit!)
+                // Reason: hover's scale-105 CSS transform briefly triggers an 'exit'
+                // event in the observer â€” causing video.pause() to fire incorrectly.
             }
         })
     }, {
@@ -298,13 +298,13 @@ function onMobileScroll() {
         const maxScroll = container.scrollWidth - container.clientWidth
         const totalVideos = mobileVideoRefs.value.filter(Boolean).length
 
-        // Edge case: at the very start → first video
+        // Edge case: at the very start â†’ first video
         if (scrollLeft <= 10) {
             if (activeMobileIndex.value !== 0) updateActiveMobileVideo(0)
             return
         }
 
-        // Edge case: at the very end → last video
+        // Edge case: at the very end â†’ last video
         if (scrollLeft >= maxScroll - 10) {
             const lastIndex = totalVideos - 1
             if (activeMobileIndex.value !== lastIndex) updateActiveMobileVideo(lastIndex)
@@ -342,7 +342,16 @@ function updateActiveMobileVideo(newIndex) {
         if (i === newIndex) {
             video.muted = false
             video.volume = 0.4
-            video.play().catch(() => {})
+            if (video.readyState >= 2) {
+                // Already has data â€” play immediately
+                video.play().catch(() => {})
+            } else {
+                // Not loaded yet â€” load first, then play when ready
+                video.load()
+                video.addEventListener('canplay', () => {
+                    video.play().catch(() => {})
+                }, { once: true })
+            }
         } else {
             video.muted = true
             video.pause()
@@ -385,7 +394,7 @@ onUnmounted(() => {
 
 <style scoped>
 /* =========================================
-   BENTO GRID — 10 COLUMNS, 15 VIDEOS
+   BENTO GRID â€” 10 COLUMNS, 15 VIDEOS
    ========================================= */
 
 /*
@@ -400,12 +409,12 @@ onUnmounted(() => {
     Row 6:  v13 v13 v13 v13 | v14 v14 | v15 v15 v15 v15
     
     Variety:
-    - v1:  2 cols × 2 rows  (Tall / Vertical)
-    - v9:  4 cols × 2 rows  (Large Landscape)
-    - v13: 4 cols × 2 rows  (Large Landscape)
-    - v14: 2 cols × 2 rows  (Tall / Vertical)
-    - v15: 4 cols × 2 rows  (Large Landscape)
-    - Rest: various 2-3 col × 1 row (Standard)
+    - v1:  2 cols Ã— 2 rows  (Tall / Vertical)
+    - v9:  4 cols Ã— 2 rows  (Large Landscape)
+    - v13: 4 cols Ã— 2 rows  (Large Landscape)
+    - v14: 2 cols Ã— 2 rows  (Tall / Vertical)
+    - v15: 4 cols Ã— 2 rows  (Large Landscape)
+    - Rest: various 2-3 col Ã— 1 row (Standard)
 */
 
 
@@ -449,7 +458,7 @@ onUnmounted(() => {
 .area-v15 { grid-area: v15; }
 
 /* =========================================
-   CELL STYLING — Sharp Industrial
+   CELL STYLING â€” Sharp Industrial
    ========================================= */
 
 .bento-cell {
@@ -517,7 +526,7 @@ onUnmounted(() => {
 }
 
 /* =========================================
-   MOBILE SCROLL — hide scrollbar
+   MOBILE SCROLL â€” hide scrollbar
    ========================================= */
 
 .scrollbar-hide {
@@ -528,3 +537,5 @@ onUnmounted(() => {
     display: none;
 }
 </style>
+
+

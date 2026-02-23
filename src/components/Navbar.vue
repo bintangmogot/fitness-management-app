@@ -1,19 +1,19 @@
 <template>
   <header class="absolute inset-x-0 top-0 z-50 border-b-2 border-primary">
     <!-- Navbar -->
-    <nav class="flex items-center bg-bg-white justify-between py-4 px-6 md:px-12 lg:px-20 xl:px-30" aria-label="Global">
+    <nav class="flex items-center bg-base-100 justify-between py-4 px-6 md:px-12 lg:px-20 xl:px-30" aria-label="Global">
         <!-- Logo -->
         <div class="flex lg:flex-1">
           <router-link :to="{name:'Home'}" class="flex flex-row gap-4 -m-1.5 p-1.5 items-center">
             <span class="sr-only">Yohanes Mogot</span>
-            <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=blue&shade=600" alt="" />
-            <p class="text-heading-2 font-anton text-text-title font-black">COACH <span class="text-primary">YOHAN</span></p>
+            <!-- <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=blue&shade=600" alt="" /> -->
+            <p class="text-heading-2 font-anton text-base-content font-black">COACH <span class="text-primary">YOHAN</span></p>
           </router-link>
         </div>
         
         <!-- Button Mobile Navbar -->
         <div class="flex xl:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-text-body" @click="mobileMenuOpen = true">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-base-content/80" @click="mobileMenuOpen = true">
             <span class="sr-only">Open main menu</span>
             <Bars3Icon class="size-6" aria-hidden="true" />
           </button>
@@ -25,7 +25,7 @@
             v-for="item in navigation" 
             :key="item.name" 
             :to="item.to" 
-            class="text-button-sm font-heading text-text-title hover:text-primary transition-colors"
+            class="text-button-sm font-heading text-base-content hover:text-primary transition-colors"
           >
             {{ item.name }}
           </router-link>
@@ -43,20 +43,20 @@
               <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" />
             </svg>
           </label>
-          <a href="#programs" class="bg-primary px-6 py-3 text-button-sm font-heading text-white shadow-card hover:bg-primary-hover transition-all">BOOK NOW</a>
+          <a href="#programs" class="bg-primary px-6 py-3 text-button-sm font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all">BOOK NOW</a>
         </div>
     </nav>
     
     <!-- List Mobile Navbar -->
     <Dialog class="xl:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
       <div class="fixed inset-0 z-50"></div>
-      <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-bg-white p-8 sm:max-w-sm sm:ring-1 sm:ring-text-dark/10">
+      <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-base-100 p-8 sm:max-w-sm sm:ring-1 sm:ring-base-content/10">
         <div class="flex items-center justify-between">
           <router-link to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
             <span class="sr-only">Your Company</span>
             <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=blue&shade=600" alt="" />
           </router-link>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-text-body" @click="mobileMenuOpen = false">
+          <button type="button" class="-m-2.5 rounded-md p-2.5 text-base-content/80" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
             <XMarkIcon class="size-6" aria-hidden="true" />
           </button>
@@ -88,13 +88,13 @@
                 :key="item.name" 
                 :to="item.to" 
                 @click="mobileMenuOpen = false"
-                class="-mx-3 block px-3 py-2 text-button-sm font-heading text-text-title hover:bg-bg-secondary"
+                class="-mx-3 block px-3 py-2 text-button-sm font-heading text-base-content hover:bg-base-200"
               >
                 {{ item.name }}
               </router-link>
             </div>
             <div class="flex py-6">
-              <a href="#programs" class="w-full bg-primary px-8 py-3 text-center text-button-sm font-heading text-white shadow-card hover:bg-primary-hover transition-all">BOOK NOW</a>
+              <a href="#programs" class="w-full bg-primary px-8 py-3 text-center text-button-sm font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all">BOOK NOW</a>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ const toggleTheme = (e) => {
 
 onMounted(() => {
   // Selalu mulai Light Mode, apapun settingan browser user
-  document.documentElement.setAttribute('data-theme', 'light');
+  document.documentElement.setAttribute('data-theme', 'cupcake');
   isDark.value = false;
 })
 // ============================================================

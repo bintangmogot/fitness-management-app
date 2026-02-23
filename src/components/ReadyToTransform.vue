@@ -1,5 +1,5 @@
 <template>
-  <section id="consultation" class="bg-dark-bg py-24 xl:py-32 px-6 md:px-12 lg:px-20 xl:px-32 relative overflow-hidden">
+  <section id="consultation" class="bg-neutral py-24 xl:py-32 px-6 md:px-12 lg:px-20 xl:px-32 relative overflow-hidden">
     <!-- CTA Banner -->
     <div 
       data-aos="fade-up"
@@ -25,7 +25,7 @@
         <a 
           href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20ready%20for%20my%20transformation.%20I'd%20like%20a%20free%20consultation%20to%20start%20my%20fitness%20journey.%20When%20can%20we%20schedule%20one%3F" 
           target="_blank"
-          class="bg-white text-primary px-10 py-5 font-heading text-2xl uppercase tracking-widest flex items-center justify-center gap-4 hover:bg-bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] group/btn relative overflow-hidden"
+          class="bg-white text-primary px-10 py-5 font-heading text-2xl uppercase tracking-widest flex items-center justify-center gap-4 hover:bg-base-100 hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] group/btn relative overflow-hidden"
         >
           <div class="absolute inset-0 bg-primary/5 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
           <svg class="w-7 h-7 text-primary relative z-10 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,18 +39,18 @@
     <!-- Banner Carousel Below -->
     <div class="mt-10 lg:mt-20 overflow-hidden  relative" data-aos="fade-up" data-aos-delay="200">
         <!-- Overlay for fade edges -->
-        <div class="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-dark-bg to-transparent z-10"></div>
-        <div class="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-dark-bg to-transparent z-10"></div>
+        <div class="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-neutral to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-neutral to-transparent z-10"></div>
         
         <div class="flex animate-marquee whitespace-nowrap gap-6 py-4">
             <div v-for="(img, idx) in carouselImages" :key="idx" 
-                 class="shrink-0 w-72 md:w-96 aspect-video bg-card-dark border-2 border-white/5 overflow-hidden relative group grayscale hover:grayscale-0 hover:border-primary/50 transition-all duration-500 shadow-xl">
+                 class="shrink-0 w-72 md:w-96 aspect-video bg-neutral-content border-2 border-white/5 overflow-hidden relative group grayscale hover:grayscale-0 hover:border-primary/50 transition-all duration-500 shadow-xl">
                 <img :src="img" alt="Gym Life" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                 <div class="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
             </div>
             <!-- Duplicate for seamless loop -->
             <div v-for="(img, idx) in carouselImages" :key="'dup-'+idx" 
-                 class="shrink-0 w-72 md:w-96 aspect-video bg-card-dark border-2 border-white/5 overflow-hidden relative group grayscale hover:grayscale-0 hover:border-primary/50 transition-all duration-500 shadow-xl">
+                 class="shrink-0 w-72 md:w-96 aspect-video bg-neutral-content border-2 border-white/5 overflow-hidden relative group grayscale hover:grayscale-0 hover:border-primary/50 transition-all duration-500 shadow-xl">
                 <img :src="img" alt="Gym Life" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                 <div class="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
             </div>

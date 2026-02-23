@@ -1,5 +1,5 @@
 <template>
-  <section class="relative py-20 px-6 md:px-12 lg:px-20 lg:py-28 xl:px-30 bg-bg-secondary overflow-hidden" id="clients">
+  <section class="relative py-20 px-6 md:px-12 lg:px-20 lg:py-28 xl:px-30 bg-base-200 overflow-hidden" id="clients">
     
     <!-- Decorative Background -->
     <div class="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
@@ -9,10 +9,10 @@
       
       <!-- Section Header -->
       <div class="flex flex-col items-center gap-4 text-center">
-        <h2 class="text-5xl md:text-7xl text-text-title font-anton font-black uppercase leading-tight">
+        <h2 class="text-5xl md:text-7xl text-base-content font-anton font-black uppercase leading-tight">
           real people. real <span class="text-primary">results.</span>
         </h2>
-        <p class="text-text-muted font-body text-body-lg max-w-xl">
+        <p class="text-base-content/60 font-body text-body-lg max-w-xl">
           A collection of clients who transformed their lives training with Coach Yohan.
         </p>
       </div>
@@ -21,17 +21,17 @@
       <div class="flex items-center justify-center gap-8 md:gap-16">
         <div class="flex flex-col items-center gap-1">
           <span class="text-3xl md:text-4xl font-anton text-primary">50+</span>
-          <span class="text-xs md:text-sm font-body text-text-muted uppercase tracking-wider">Clients</span>
+          <span class="text-xs md:text-sm font-body text-base-content/60 uppercase tracking-wider">Clients</span>
         </div>
         <div class="w-px h-10 bg-primary/20"></div>
         <div class="flex flex-col items-center gap-1">
           <span class="text-3xl md:text-4xl font-anton text-primary">95%</span>
-          <span class="text-xs md:text-sm font-body text-text-muted uppercase tracking-wider">Success Rate</span>
+          <span class="text-xs md:text-sm font-body text-base-content/60 uppercase tracking-wider">Success Rate</span>
         </div>
         <div class="w-px h-10 bg-primary/20"></div>
         <div class="flex flex-col items-center gap-1">
           <span class="text-3xl md:text-4xl font-anton text-primary">5+</span>
-          <span class="text-xs md:text-sm font-body text-text-muted uppercase tracking-wider">Years</span>
+          <span class="text-xs md:text-sm font-body text-base-content/60 uppercase tracking-wider">Years</span>
         </div>
       </div>
 
@@ -51,7 +51,7 @@
           <div 
             v-for="(client, index) in clients" 
             :key="'m-' + index"
-            class="snap-center shrink-0 w-[80%] bg-card-white border border-primary/5 overflow-hidden group hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+            class="snap-center shrink-0 w-[80%] bg-base-100 border border-primary/5 overflow-hidden group hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
           >
             <!-- Image -->
             <div class="relative overflow-hidden cursor-pointer" @click="openModal(client.image)">
@@ -68,8 +68,8 @@
             <!-- Info -->
             <div class="p-4 flex items-center justify-between gap-3">
               <div>
-                <h3 class="text-lg font-anton uppercase text-text-title leading-tight">{{ client.title }}</h3>
-                <p class="text-xs font-body text-text-muted mt-0.5">{{ client.desc }}</p>
+                <h3 class="text-lg font-anton uppercase text-base-content leading-tight">{{ client.title }}</h3>
+                <p class="text-xs font-body text-base-content/60 mt-0.5">{{ client.desc }}</p>
               </div>
               <span class="shrink-0 text-sm font-heading text-primary bg-primary/8 px-3 py-1.5 tracking-wide">
                 {{ client.metric }}
@@ -84,7 +84,7 @@
             v-for="(client, index) in clients" 
             :key="'dot-m-' + index"
             class="h-1.5 rounded-full transition-all duration-300"
-            :class="activeMobileIndex === index ? 'w-6 bg-primary' : 'w-1.5 bg-text-body-2/30'"
+            :class="activeMobileIndex === index ? 'w-6 bg-primary' : 'w-1.5 bg-base-content/30'"
           ></button>
         </div>
 
@@ -105,7 +105,7 @@
                 <div 
                   v-for="(client, i) in chunk" 
                   :key="i" 
-                  class="bg-card-white border border-primary/5 overflow-hidden group hover:border-primary/15 hover:shadow-xl hover:shadow-primary/8 hover:-translate-y-1 transition-all duration-500 animate-card-in"
+                  class="bg-base-100 border border-primary/5 overflow-hidden group hover:border-primary/15 hover:shadow-xl hover:shadow-primary/8 hover:-translate-y-1 transition-all duration-500 animate-card-in"
                   :style="{ animationDelay: `${i * 120}ms` }"
                 >
                   <!-- Image Container -->
@@ -135,8 +135,8 @@
                   <!-- Info Section -->
                   <div class="p-5 xl:p-6 flex items-start justify-between gap-3">
                     <div class="flex flex-col gap-1">
-                      <h3 class="text-xl xl:text-2xl font-anton uppercase text-text-title leading-tight group-hover:text-primary transition-colors duration-300">{{ client.title }}</h3>
-                      <p class="text-sm font-body text-text-muted">{{ client.desc }}</p>
+                      <h3 class="text-xl xl:text-2xl font-anton uppercase text-base-content leading-tight group-hover:text-primary transition-colors duration-300">{{ client.title }}</h3>
+                      <p class="text-sm font-body text-base-content/60">{{ client.desc }}</p>
                     </div>
                     <span class="shrink-0 text-sm font-heading text-primary bg-primary/8 px-3 py-1.5 tracking-wide mt-0.5">
                       {{ client.metric }}
@@ -152,7 +152,7 @@
         <button 
           v-if="desktopChunks.length > 1"
           @click="prevPage" 
-          class="hidden md:flex absolute left-1 lg:-left-5 xl:-left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 xl:w-12 xl:h-12 items-center justify-center bg-card-white/90 backdrop-blur-sm border border-primary/10 text-text-title hover:bg-primary hover:text-white hover:border-primary shadow-lg hover:shadow-primary/25 transition-all duration-300 group/btn"
+          class="hidden md:flex absolute left-1 lg:-left-5 xl:-left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 xl:w-12 xl:h-12 items-center justify-center bg-base-100/90 backdrop-blur-sm border border-primary/10 text-base-content hover:bg-primary hover:text-primary-content hover:border-primary shadow-lg hover:shadow-primary/25 transition-all duration-300 group/btn"
           aria-label="Previous"
         >
           <svg class="w-5 h-5 group-hover/btn:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
@@ -160,7 +160,7 @@
         <button 
           v-if="desktopChunks.length > 1"
           @click="nextPage" 
-          class="hidden md:flex absolute right-1 lg:-right-5 xl:-right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 xl:w-12 xl:h-12 items-center justify-center bg-card-white/90 backdrop-blur-sm border border-primary/10 text-text-title hover:bg-primary hover:text-white hover:border-primary shadow-lg hover:shadow-primary/25 transition-all duration-300 group/btn"
+          class="hidden md:flex absolute right-1 lg:-right-5 xl:-right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 xl:w-12 xl:h-12 items-center justify-center bg-base-100/90 backdrop-blur-sm border border-primary/10 text-base-content hover:bg-primary hover:text-primary-content hover:border-primary shadow-lg hover:shadow-primary/25 transition-all duration-300 group/btn"
           aria-label="Next"
         >
           <svg class="w-5 h-5 group-hover/btn:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
@@ -177,14 +177,14 @@
           class="relative h-2.5 rounded-full transition-all duration-500 ease-out focus:outline-none"
           :class="currentPage === index 
             ? 'w-8 bg-primary shadow-md shadow-primary/30' 
-            : 'w-2.5 bg-text-body-2/30 hover:bg-text-body-2/50'"
+            : 'w-2.5 bg-base-content/30 hover:bg-base-content/50'"
         >
           <span v-if="currentPage === index" class="absolute inset-0 rounded-full bg-primary/40 animate-ping-slow"></span>
         </button>
       </div>
 
       <!-- View All Link -->
-      <a href="#transforms" class="group/link w-fit flex items-center gap-2 text-text-title font-heading text-button tracking-wider px-6 py-3 border border-transparent hover:border-primary/20 hover:bg-card-white hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+      <a href="#transforms" class="group/link w-fit flex items-center gap-2 text-base-content font-heading text-button tracking-wider px-6 py-3 border border-transparent hover:border-primary/20 hover:bg-base-100 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
         View All Transformations
         <svg class="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
       </a>

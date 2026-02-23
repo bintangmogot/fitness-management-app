@@ -1,14 +1,14 @@
-<template>
-  <section class="py-20 px-6 md:px-12 lg:px-20 xl:px-30 bg-bg-secondary" id="transforms">
+﻿<template>
+  <section class="py-20 px-6 md:px-12 lg:px-20 xl:px-30 bg-base-200" id="transforms">
     <div class="flex flex-col items-center gap-12 max-w-7xl mx-auto">
       
       <!-- Header -->
       <div class="flex flex-col items-center gap-4 text-center">
-        <h2 class="text-5xl md:text-7xl text-text-title font-anton font-black uppercase leading-tight">
+        <h2 class="text-5xl md:text-7xl text-base-content font-anton font-black uppercase leading-tight">
           The <span class="text-primary">Transforms.</span>
         </h2>
-        <p class="text-md md:text-lg text-text-body font-body font-normal leading-relaxed max-w-2xl">
-          Don’t just take my word for it. Hear from the people who transformed their lives in Bali.
+        <p class="text-md md:text-lg text-base-content/80 font-body font-normal leading-relaxed max-w-2xl">
+          Donâ€™t just take my word for it. Hear from the people who transformed their lives in Bali.
         </p>
       </div>
 
@@ -21,7 +21,7 @@
         <button 
           v-if="hasMultiplePages"
           @click="prevPage" 
-          class="hidden md:flex absolute left-1 lg:-left-16 xl:-left-20 top-1/2 -translate-y-1/2 z-10 btn btn-square rounded-none btn-outline text-primary hover:text-white bg-white hover:bg-primary hover:border-primary border-2 hover:shadow-md w-10 h-10 xl:w-12 xl:h-12 transition-all duration-300"
+          class="hidden md:flex absolute left-1 lg:-left-16 xl:-left-20 top-1/2 -translate-y-1/2 z-10 btn btn-square rounded-none btn-outline text-primary hover:text-white bg-base-100 hover:bg-primary hover:border-primary border-2 hover:shadow-md w-10 h-10 xl:w-12 xl:h-12 transition-all duration-300"
           :disabled="isAnimating"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
@@ -32,7 +32,7 @@
         <button 
           v-if="hasMultiplePages"
           @click="nextPage" 
-          class="hidden md:flex absolute right-1 lg:-right-16 xl:-right-20 top-1/2 -translate-y-1/2 z-10 btn btn-square rounded-none btn-outline text-primary hover:text-white bg-white hover:bg-primary hover:border-primary border-2 hover:shadow-md w-10 h-10 xl:w-12 xl:h-12 transition-all duration-300"
+          class="hidden md:flex absolute right-1 lg:-right-16 xl:-right-20 top-1/2 -translate-y-1/2 z-10 btn btn-square rounded-none btn-outline text-primary hover:text-white bg-base-100 hover:bg-primary hover:border-primary border-2 hover:shadow-md w-10 h-10 xl:w-12 xl:h-12 transition-all duration-300"
           :disabled="isAnimating"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
@@ -52,17 +52,17 @@
           <div 
             v-for="(item, index) in displayedItems" 
             :key="item.id" 
-            class="min-w-[85%] md:min-w-0 snap-center flex flex-col bg-card-white shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer border-l-4 md:border-l-6 border-primary xl:border-primary/50 xl:hover:border-primary h-full animate-fade-in"
+            class="min-w-[85%] md:min-w-0 snap-center flex flex-col bg-base-100 shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer border-l-4 md:border-l-6 border-primary xl:border-primary/50 xl:hover:border-primary h-full animate-fade-in"
             @click="openVideo(item.video)"
           >
             
             <!-- Video Thumbnail (9:16) -->
-            <div class="relative w-full aspect-9/16 bg-gray-200 overflow-hidden">
+            <div class="relative w-full aspect-9/16 bg-base-200 overflow-hidden">
               <img :src="item.image" :alt="item.author" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               
               <!-- Play Button Overlay -->
               <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
-                <div class="w-16 h-16 rounded-full bg-white/20 border-2 hover:bg-bg-white hover:text-primary text-bg-white border-white/40 hover:border-primary backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div class="w-16 h-16 rounded-full bg-white/20 border-2 hover:bg-base-100 hover:text-primary text-base-100 border-white/40 hover:border-primary backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform">
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
                       </svg>
@@ -78,19 +78,19 @@
               </div>
 
               <!-- Quote Headline -->
-              <h3 class="font-anton text-2xl uppercase text-text-body leading-tight">
+              <h3 class="font-anton text-2xl uppercase text-base-content/80 leading-tight">
                 "{{ item.headline }}"
               </h3>
 
               <!-- Body Text -->
-              <p class="text-text-body font-body text-sm leading-relaxed flex-1 line-clamp-4">
+              <p class="text-base-content/80 font-body text-sm leading-relaxed flex-1 line-clamp-4">
                 "{{ item.text }}"
               </p>
 
               <!-- Author -->
               <div class="pt-4 border-t border-primary/20">
-                <p class="font-heading text-text-body text-lg tracking-wide uppercase">
-                  - {{ item.author }}, <span class="text-text-muted">{{ item.role }}</span>
+                <p class="font-heading text-base-content/80 text-lg tracking-wide uppercase">
+                  - {{ item.author }}, <span class="text-base-content/60">{{ item.role }}</span>
                 </p>
               </div>
             </div>
@@ -107,7 +107,7 @@
                 v-for="(item, index) in transforms" 
                 :key="'dot-m-'+index"
                 class="h-2 rounded-full transition-all duration-300"
-                :class="activeMobileIndex === index ? 'w-6 bg-primary' : 'w-2 bg-gray-300'"
+                :class="activeMobileIndex === index ? 'w-6 bg-primary' : 'w-2 bg-base-content/30'"
              ></button>
            </div>
            
@@ -117,7 +117,7 @@
                 v-for="page in totalPages" 
                 :key="'dot-d-'+page"
                 class="w-3 h-3 rounded-full transition-all duration-300 hover:bg-primary/50"
-                :class="currentPage === page ? 'bg-primary scale-125' : 'bg-gray-300'"
+                :class="currentPage === page ? 'bg-primary scale-125' : 'bg-base-content/30'"
                 @click="goToPage(page)"
              ></button>
            </div>
@@ -127,7 +127,7 @@
 
       <!-- CTA -->
       <div class="flex flex-col items-center mt-4">
-        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I%20want%20to%20start%20today.%20Please%20help%20me%20choose%20the%20best%20program%20for%20my%20goals.%20Thank%20you!%0AI'm%20interested%20in%20your%20program." target="_blank" class="bg-primary px-8 py-3 text-button font-heading text-white shadow-card hover:bg-primary-hover transition-all hover-lift w-full sm:w-auto">START YOUR JOURNEY</a>
+        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I%20want%20to%20start%20today.%20Please%20help%20me%20choose%20the%20best%20program%20for%20my%20goals.%20Thank%20you!%0AI'm%20interested%20in%20your%20program." target="_blank" class="bg-primary px-8 py-3 text-button font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift w-full sm:w-auto">START YOUR JOURNEY</a>
       </div>
 
     </div>
@@ -339,3 +339,6 @@ const getEmbedUrl = (url) => {
     animation: fadeIn 0.5s ease-out forwards;
 }
 </style>
+
+
+
