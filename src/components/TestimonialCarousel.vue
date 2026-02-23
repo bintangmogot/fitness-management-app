@@ -25,12 +25,12 @@
         </div>
         <div class="w-px h-10 bg-primary/20"></div>
         <div class="flex flex-col items-center gap-1">
-          <span class="text-3xl md:text-4xl font-anton text-primary">95%</span>
+          <span class="text-3xl md:text-4xl font-anton text-accent">95%</span>
           <span class="text-xs md:text-sm font-body text-base-content/60 uppercase tracking-wider">Success Rate</span>
         </div>
         <div class="w-px h-10 bg-primary/20"></div>
         <div class="flex flex-col items-center gap-1">
-          <span class="text-3xl md:text-4xl font-anton text-primary">5+</span>
+          <span class="text-3xl md:text-4xl font-anton text-secondary">5+</span>
           <span class="text-xs md:text-sm font-body text-base-content/60 uppercase tracking-wider">Years</span>
         </div>
       </div>

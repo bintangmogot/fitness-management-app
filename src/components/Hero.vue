@@ -6,7 +6,7 @@
       
     <div class="max-w-7xl mx-auto py-32 sm:py-20 lg:py-32">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div class="relative px-4 py-1 text-button-sm text-white ring-1 ring-white bg-white/15">
+        <div class="relative px-4 py-1 text-button-sm text-white ring-1 ring-accent bg-accent/20">
           GET IN SHAPE IN BALI 
         </div>
       </div>
@@ -14,11 +14,11 @@
           <!-- <mark> untuk menyoroti teks penting -->
         <h1 class="text-5xl md:text-hero font-title tracking-tight text-white">TRAIN WITH <span class="text-primary block">YOHANES</span></h1>
           <p class="mt-8 text-lg font-body font-medium text-white sm:text-xl max-w-xl mx-auto">
-            Transform your physique and performance with gritty, high-impact coaching. <mark class="bg-primary text-primary-content px-1">No excuses</mark>, just results.
+            Transform your physique and performance with gritty, high-impact coaching. <mark class="bg-secondary text-secondary-content px-1">No excuses</mark>, just results.
           </p>
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
           <a href="#programs" class="bg-primary px-8 py-3 text-button font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift w-full sm:w-auto">BOOK YOUR SESSION</a>
-          <a href="#about" class="text-button font-heading text-white hover:text-primary hover:bg-white hover-lift transition-colors border border-white px-8 py-3 w-full sm:w-auto">LEARN MORE</a>
+          <a href="#about" class="text-button font-heading text-white hover:text-primary hover:bg-white hover-lift transition-colors border border-primary px-8 py-3 w-full sm:w-auto">LEARN MORE</a>
         </div>
       </div>
     </div>

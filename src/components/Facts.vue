@@ -2,8 +2,8 @@
     <section class="bg-base-100 py-20 px-6 lg:px-20 xl:px-30 flex flex-col gap-12">
       <!-- Section Header -->
       <div class="flex flex-row items-center justify-start gap-4">
-        <div class="w-12 h-12 md:w-14 md:h-14 rounded-none bg-primary/10 flex items-center justify-center text-primary shrink-0">
-          <svg class="w-8 h-8 lg:w-10 lg:h-10 text-primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <div class="w-12 h-12 md:w-14 md:h-14 rounded-none bg-accent/10 flex items-center justify-center text-accent shrink-0">
+            <svg class="w-8 h-8 lg:w-10 lg:h-10 text-accent" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z"/>
           </svg>
         </div>
@@ -16,14 +16,29 @@
       <!-- Facts Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div v-for="(fact, index) in facts" :key="index" 
-             class="group flex flex-col bg-base-100 border border-l-4 border-primary lg:border-base-300/50 hover:border-primary  p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+             class="group flex flex-col bg-base-100 border border-l-4 p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full"
+             :class="[
+               index % 3 === 0 ? 'border-primary lg:border-base-300/50 hover:border-primary' :
+               index % 3 === 1 ? 'border-secondary lg:border-base-300/50 hover:border-secondary' :
+                                 'border-accent lg:border-base-300/50 hover:border-accent'
+             ]">
             
-            <div class="w-12 h-12 md:w-14 md:h-14 mb-4 rounded-none flex items-center justify-center text-primary shrink-0 bg-primary/10 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+            <div class="w-12 h-12 md:w-14 md:h-14 mb-4 rounded-none flex items-center justify-center shrink-0 transition-colors duration-300"
+                 :class="[
+                   index % 3 === 0 ? 'text-primary bg-primary/10 group-hover:bg-primary group-hover:text-white' :
+                   index % 3 === 1 ? 'text-secondary bg-secondary/10 group-hover:bg-secondary group-hover:text-white' :
+                                     'text-accent bg-accent/10 group-hover:bg-accent group-hover:text-white'
+                 ]">
                 <component :is="fact.icon" class="w-8 h-8 xl:w-10 xl:h-10" />
             </div>
             
             <div>
-                <h4 class="font-anton text-2xl uppercase text-base-content/80 mb-2 group-hover:text-primary transition-colors duration-300">{{ fact.title }}</h4>
+                <h4 class="font-anton text-2xl uppercase text-base-content/80 mb-2 transition-colors duration-300"
+                    :class="[
+                      index % 3 === 0 ? 'group-hover:text-primary' :
+                      index % 3 === 1 ? 'group-hover:text-secondary' :
+                                        'group-hover:text-accent'
+                    ]">{{ fact.title }}</h4>
                 <p class="text-body text-base-content/60 text-sm leading-relaxed">{{ fact.description }}</p>
             </div>
         </div>

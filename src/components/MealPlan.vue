@@ -11,7 +11,7 @@
                 </div>
                 <!-- Desktop button -->
                 <div class="hidden md:flex flex-row w-full h-full justify-end self-end">
-                     <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'd%20like%20to%20pre-order%20a%20meal%20plan.%20Can%20you%20share%20more%20details%3F" target="_blank" class="flex flex-row items-center gap-3 bg-primary px-8 py-3 text-button font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift">
+                     <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'd%20like%20to%20pre-order%20a%20meal%20plan.%20Can%20you%20share%20more%20details%3F" target="_blank" class="flex flex-row items-center gap-3 bg-accent px-8 py-3 text-button font-heading text-accent-content shadow-card hover:shadow-accent transition-all hover-lift">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
                     </svg>
@@ -38,8 +38,8 @@
                         </div>
                         
                         <!-- Price Badge (Moved outside overflow-hidden) -->
-                        <div class="absolute -bottom-6 right-6 w-16 h-16 bg-base-100 dark:bg-base-300 rounded-full flex items-center justify-center shadow-lg z-10">
-                            <span class="text-primary font-anton text-xl">{{ meal.price }}</span>
+                        <div class="absolute -bottom-6 right-6 w-16 h-16 bg-white dark:bg-base-300 rounded-full flex items-center justify-center shadow-lg z-10">
+                            <span class="text-accent font-anton text-xl">{{ meal.price }}</span>
                         </div>
                     </div>
 
@@ -60,25 +60,25 @@
                                 <div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out"></div>
                                 <div class="relative z-10">
                                     <span class="block text-primary group-hover:text-white transition-colors duration-100 font-bold font-anton text-lg">{{ meal.macros.pro }}</span>
-                                    <span class="block text-xs text-secondary-content/60 group-hover:text-white/80 transition-colors duration-100 font-bold uppercase">PRO</span>
+                                    <span class="block text-xs text-base-content group-hover:text-white/80 transition-colors duration-100 font-bold uppercase">PRO</span>
                                 </div>
                             </div>
                             
                             <!-- Carbs - Delay 75ms -->
                             <div class="relative overflow-hidden py-2 px-1 text-center">
-                                <div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out delay-75"></div>
+                                <div class="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out delay-75"></div>
                                 <div class="relative z-10">
-                                    <span class="block text-primary group-hover:text-white transition-colors duration-100 delay-75 font-bold font-anton text-lg">{{ meal.macros.carb }}</span>
-                                    <span class="block text-xs text-secondary-content/60 group-hover:text-white/80 transition-colors duration-100 delay-75 font-bold uppercase">CARB</span>
+                                    <span class="block text-accent group-hover:text-white transition-colors duration-100 delay-75 font-bold font-anton text-lg">{{ meal.macros.carb }}</span>
+                                    <span class="block text-xs text-base-content group-hover:text-white/80 transition-colors duration-100 delay-75 font-bold uppercase">CARB</span>
                                 </div>
                             </div>
 
                             <!-- Fat - Delay 150ms -->
                             <div class="relative overflow-hidden py-2 px-1 text-center">
-                                <div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out delay-150"></div>
+                                <div class="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-100 ease-out delay-150"></div>
                                 <div class="relative z-10">
-                                    <span class="block text-primary group-hover:text-white transition-colors duration-100 delay-150 font-bold font-anton text-lg">{{ meal.macros.fat }}</span>
-                                    <span class="block text-xs text-secondary-content/60 group-hover:text-white/80 transition-colors duration-100 delay-150 font-bold uppercase">FAT</span>
+                                    <span class="block text-secondary group-hover:text-white transition-colors duration-100 delay-150 font-bold font-anton text-lg">{{ meal.macros.fat }}</span>
+                                    <span class="block text-xs text-base-content group-hover:text-white/80 transition-colors duration-100 delay-150 font-bold uppercase">FAT</span>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
 
              <!-- Mobile button -->
              <div class="flex md:hidden flex-row w-full justify-center">
-                <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'd%20like%20to%20pre-order%20a%20meal%20plan.%20Can%20you%20share%20more%20details%3F" target="_blank" class="flex flex-row items-center gap-3 bg-primary px-8 py-3 text-button font-heading text-white shadow-card hover:bg-primary-focus transition-all hover-lift w-full justify-center">
+                <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'd%20like%20to%20pre-order%20a%20meal%20plan.%20Can%20you%20share%20more%20details%3F" target="_blank" class="flex flex-row items-center gap-3 bg-accent px-8 py-3 text-button font-heading text-accent-content shadow-card hover:shadow-accent transition-all hover-lift w-full justify-center">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
                 </svg>

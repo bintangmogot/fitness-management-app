@@ -6,11 +6,11 @@
         </h2>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
             <div v-for="(faq, index) in faqs" :key="index" 
-                class="collapse collapse-arrow bg-base-100 dark:bg-base-300 border border-t-4 border-primary mx-auto rounded-none"
+                class="collapse collapse-arrow bg-base-100 border border-t-4 border-primary mx-auto rounded-none"
                 :class="{ 'collapse-open': activeIndex === index }"
                 @click="toggle(index)"
             >
-                <div class="collapse-title font-heading font-black text-xl text-primary text-white border-b select-none">
+                <div class="collapse-title font-heading font-black text-xl text-primary dark:text-white border-b select-none">
                     {{ faq.question }}
                 </div>
                 <div class="collapse-content text-sm text-primary dark:text-white">

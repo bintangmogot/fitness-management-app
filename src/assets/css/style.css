@@ -6,10 +6,50 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300..900;1,300..900&family=Anton&family=Bebas+Neue&display=swap');
 
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 /* 2. Import Tailwind v4 */
 @import "tailwindcss";
 @plugin "daisyui"{
   themes: all; 
+}
+
+@plugin "daisyui/theme"{
+  name: "myTheme";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* Primary — Bold Blue */
+  --color-primary: #0046DE;
+  --color-primary-content: #f5f5f5;
+
+  /* Secondary — Vibrant Magenta/Pink */
+  --color-secondary: #FE0075;
+  --color-secondary-content: #FFF5F9 ;
+  --color-accent: #089872 ;
+  --color-accent-content: #ffffff;
+
+
+  /* Base — Warm Ivory (premium, nyaman di mata) */
+  --color-base-100: #FAF7F2;      /* Background utama — warm ivory */
+  --color-base-200: #F0ECE3;      /* Section alternatif — sandy beige */
+  --color-base-300: #F0F4F8;      /* Border/divider — warm stone */
+  --color-base-content: #1A1A2E;  /* Teks utama — deep navy */
+
+  /* Neutral — Untuk section gelap (footer, services, dll) */
+  --color-neutral: #1A1A2E;
+  --color-neutral-content: #2A2A4A;
+
+  /* Info / Success / Warning / Error */
+  --color-info: #3B82F6;
+  --color-info-content: #ffffff;
+  --color-success: #22C55E;
+  --color-success-content: #ffffff;
+  --color-warning: #F59E0B;
+  --color-warning-content: #ffffff;
+  --color-error: #EF4444;
+  --color-error-content: #ffffff;
 }
 @plugin "daisyui/theme"{
   name: "light";
@@ -19,7 +59,7 @@
 
   /* Primary */
   --color-primary: #0046DE;
-  --color-primary-content: #ffffff;
+  --color-primary-content: #f5f5f5;
   --color-primary-focus: #0037B0;
 
   /* Base (Dynamic Backgrounds & Text) */
@@ -54,19 +94,34 @@
   /* Primary (Lighter Blue for Dark Mode) */
   --color-primary: #0046DE;
   --color-primary-content: #ffffff;
-  --color-primary-focus: #60A5FA;
 
-  /* Base (Dynamic Backgrounds & Text) */
-  --color-base-100: #0F0F23;      /* Background utama halaman */
-  --color-base-200: #171736;      /* Background section alternatif */
+  /* Secondary — Lighter Pink for dark backgrounds */
+  --color-secondary: #FF4D94;
+  --color-secondary-content: #ffffff;
+
+  /* Accent — Brighter Gold for dark backgrounds */
+  --color-accent: #15F5BA;
+  --color-accent-content: #1A1A2E;
+
+  /* Base (Dark backgrounds) */
+  --color-base-100: #0F0F23;      /* Background utama */
+  --color-base-200: #171736;      /* Section alternatif */
   --color-base-300: #1E1E45;      /* Border/divider */
-  --color-base-content: #f9f9f9;  /* Warna teks utama */
-  --color-secondary: #eff6ff;
-  --color-secondary-content: #f9f9f9;
+  --color-base-content: #F5F5F5;  /* Teks utama */
 
   /* Neutral (Tetap gelap di dark mode juga) */
   --color-neutral: #0F0F23;
   --color-neutral-content: #1E1E45;
+
+  /* Info / Success / Warning / Error */
+  --color-info: #60A5FA;
+  --color-info-content: #ffffff;
+  --color-success: #4ADE80;
+  --color-success-content: #ffffff;
+  --color-warning: #FBBF24;
+  --color-warning-content: #1A1A2E;
+  --color-error: #F87171;
+  --color-error-content: #ffffff;
 
   --radius-selector: 1rem;
   --radius-field: 0.25rem;
@@ -85,7 +140,6 @@
 @theme {
 
   /* === STATIC COLORS (Konstan, tidak berubah antar tema) === */
-  /* Untuk section yang selalu dark, referensikan langsung ke neutral */
   --color-neutral: var(--color-neutral);
   --color-neutral-content: var(--color-neutral-content);
 
@@ -95,10 +149,15 @@
   --color-base-300: var(--color-base-300);
   --color-base-content: var(--color-base-content);
 
-  /* === ACCENT === */
+  /* === SECONDARY & ACCENT (Exposed for Tailwind) === */
+  --color-secondary: var(--color-secondary);
+  --color-secondary-content: var(--color-secondary-content);
+  --color-accent: var(--color-accent);
+  --color-accent-content: var(--color-accent-content);
+
+  /* === SUPPORT === */
   --color-hover-light: #EFF6FF;
   --color-line: #C2D8F4;
-  --color-accent: #22D3EE;
 
   /* === FONTS (Must start with --font-) === */
   /* Usage: font-title, font-heading, font-body */
@@ -148,6 +207,8 @@
   /* === SHADOWS (Must start with --shadow-) === */
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-card-hover: 0 8px 24px rgba(0, 70, 222, 0.15);
+  --shadow-secondary: 0 8px 24px rgba(254, 0, 117, 0.15);
+  --shadow-accent: 0 8px 24px rgba(220, 165, 77, 0.15);
 
   /* === ANIMATIONS (Must start with --animate-) === */
   --animate-float: float 3s ease-in-out infinite;
