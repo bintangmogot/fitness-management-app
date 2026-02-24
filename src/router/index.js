@@ -15,7 +15,14 @@ const routes = [
     path: '/food',
     name: 'Food',
     component: () => import('../pages/FoodPage.vue')
+  },
+  {
+    path: '/hero',
+    name: 'Hero',
+    component: () => import('../pages/NewPage.vue')
   }
+
+
 ]
 
 const router = createRouter({
