@@ -46,10 +46,10 @@
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 muted loop playsinline
                                 preload="none"
+                                :poster="video.poster"
                                 :data-src="video.mobileSrc"
                                 :data-mobile-index="index"
                             >
-                                <source :src="video.mobileSrc" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 transition-colors duration-300" :class="activeMobileIndex === index ? 'bg-black/10' : 'bg-black/40'"></div>
                             
@@ -328,7 +328,8 @@ function setupMobileObserver() {
 
             if (entry.isIntersecting) {
                 // Load video source if needed
-                if (video.dataset.src && !video.getAttribute('src')) {
+                if (video.dataset.src && !video.src) {
+                    video.src = video.dataset.src
                     video.load()
                 }
 
@@ -376,13 +377,17 @@ function updateActiveMobileVideo(newIndex) {
         if (i === newIndex) {
             video.muted = isGlobalMuted.value
             video.volume = 0.6
-            if (video.readyState >= 2) {
-                video.play().catch(() => {})
-            } else {
-                video.addEventListener('canplay', () => {
-                    video.play().catch(() => {})
-                }, { once: true })
+            
+            // Explicitly ensure src is set and loaded
+            if (!video.src && video.dataset.src) {
+                video.src = video.dataset.src
             }
+            
+            video.play().catch(() => {
+                // Autoplay blocked handling
+                video.muted = true
+                video.play().catch(() => {})
+            })
         } else {
             video.muted = true
             video.pause()

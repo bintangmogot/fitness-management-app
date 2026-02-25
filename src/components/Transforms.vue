@@ -8,7 +8,7 @@
           The <span class="text-primary">Transforms.</span>
         </h2>
         <p class="text-md md:text-lg text-base-content/80 font-body font-normal leading-relaxed max-w-2xl">
-          Donâ€™t just take my word for it. Hear from the people who transformed their lives in Bali.
+          Don't just take my word for it. Hear from the people who transformed their lives in Bali.
         </p>
       </div>
 
@@ -44,7 +44,7 @@
         <!-- Mobile: Horizontal Scroll | Desktop: Grid 3 Cols (Paged) -->
         <div 
           ref="scrollContainer"
-          class="w-full flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 lg:grid lg:grid-cols-3 lg:overflow-visible scrollbar-hide transition-all duration-500"
+          class="w-full flex items-stretch overflow-x-auto snap-x snap-mandatory gap-6 pb-8 md:grid md:grid-cols-3 md:overflow-visible scrollbar-hide transition-all duration-500"
           @scroll="handleScroll"
         >
           
@@ -52,12 +52,12 @@
           <div 
             v-for="(item, index) in displayedItems" 
             :key="item.id" 
-            class="min-w-[85%] md:min-w-0 snap-center flex flex-col bg-base-100 shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer border-l-4 md:border-l-6 border-primary xl:border-primary/50 xl:hover:border-primary h-full animate-fade-in"
+            class="min-w-[85%] md:min-w-0 snap-center flex flex-col bg-base-100 shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer border-l-4 md:border-l-6 border-primary xl:border-primary/50 xl:hover:border-primary animate-fade-in"
             @click="openVideo(item.video)"
           >
             
             <!-- Video Thumbnail (9:16) -->
-            <div class="relative w-full aspect-9/16 bg-base-200 overflow-hidden">
+            <div class="relative w-full aspect-3/4 bg-base-200 overflow-hidden">
               <img :src="item.image" :alt="item.author" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               
               <!-- Play Button Overlay -->
