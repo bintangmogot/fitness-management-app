@@ -170,8 +170,8 @@ function vidUrl(name, width = 300) {
     return `${BASE}/f_auto,q_auto,w_${width},fps_24,du_20/${name}`
 }
 
-function posterUrl(name) {
-    return `${BASE}/f_auto,q_auto,w_300,so_0/${name}.jpg`
+function posterUrl(name, width = 400) {
+    return `${BASE}/f_auto,q_auto,w_${width},so_0/${name}.jpg`
 }
 
 const cellWidths = {
@@ -226,8 +226,8 @@ const videoLabels = [
 
 const videos = ref(videoNames.map((name, i) => ({
     desktopSrc: vidUrl(name, cellWidths[i] || 300),
-    mobileSrc: vidUrl(name, 200),
-    poster: posterUrl(name),
+    mobileSrc: vidUrl(name, 720), // HD quality for mobile
+    poster: posterUrl(name, 720),    // Match poster quality to video
     ...videoLabels[i]
 })))
 

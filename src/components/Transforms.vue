@@ -62,7 +62,7 @@
               
               <!-- Play Button Overlay -->
               <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
-                <div class="w-16 h-16 rounded-full bg-white/20 border-2 hover:bg-base-100 hover:text-primary text-base-100 border-white/40 hover:border-primary backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div class="w-16 h-16 rounded-full bg-white/20 border-2 hover:bg-base-100 hover:text-primary text-primary-content border-white/40 hover:border-primary backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform">
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
                       </svg>
