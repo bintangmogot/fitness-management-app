@@ -8,59 +8,79 @@
         <div class="lg:hidden relative min-h-[70vh] flex items-center justify-center">
             <!-- Background Video -->
             <div class="absolute inset-0 z-0">
-                <video
+                <!-- <video
                     class="w-full h-full object-cover"
                     autoplay muted loop playsinline
                     preload="metadata"
                     poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200"
                 >
                     <source :src="getMobileBgSrc()" type="video/mp4">
-                </video>
-                <div class="absolute inset-0 bg-neutral/85"></div>
+                </video> -->
+                <div class="absolute inset-0 bg-neutral"></div>
             </div>
 
             <!-- Overlay Content -->
             <div class="relative z-10 text-center px-6 py-20 w-full overflow-hidden">
-                <span class="text-primary font-heading tracking-[0.3em] text-sm uppercase mb-4 block">Video Gallery</span>
-                <h2 class="text-5xl md:text-7xl text-white font-anton font-black uppercase leading-tight mb-6">
+                <span class="text-primary font-heading tracking-[0.3em] text-sm uppercase mb-2 block">Video Gallery</span>
+                <h2 class="text-5xl md:text-7xl text-white font-anton font-black uppercase leading-tight mb-5">
                     15 <span class="text-primary">Videos.</span>
                 </h2>
-                <p class="text-base-content/30 font-body text-md md:text-lg max-w-md mx-auto mb-8 leading-relaxed">
+                <p class="text-primary-content/70 font-body text-md md:text-lg max-w-md mx-auto mb-8 leading-relaxed">
                     12 years of training, 5 years of coaching, every video is real proof of dedication and transformation built alongside our members.
                 </p>
 
-                <!-- Mobile Horizontal Scroll â€” center video plays with sound -->
-                <div 
-                    ref="mobileScrollContainer"
-                    class="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory -mx-6 px-6 scrollbar-hide"
-                    @scroll="onMobileScroll"
-                >
-                    <div
-                        v-for="(video, index) in videos"
-                        :key="index"
-                        class="snap-center shrink-0 w-[160px] h-[220px] md:w-[200px] md:h-[280px] relative overflow-hidden group"
+                <!-- Mobile Horizontal Scroll — center video plays with sound -->
+                <div class="relative">
+                    <div 
+                        ref="mobileScrollContainer"
+                        class="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory -mx-6 px-6 scrollbar-hide"
+                        @scroll="onMobileScroll"
                     >
-                        <video
-                            :ref="el => { if (el) mobileVideoRefs[index] = el }"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            muted loop playsinline
-                            preload="none"
-                            :data-src="video.mobileSrc"
-                            :data-mobile-index="index"
+                        <div
+                            v-for="(video, index) in videos"
+                            :key="index"
+                            class="snap-center snap-stop-always shrink-0 w-full h-[500px] md:w-[240px] md:h-[320px] relative overflow-hidden group"
                         >
-                            <source :src="video.mobileSrc" type="video/mp4">
-                        </video>
-                        <div class="absolute inset-0 transition-colors duration-300" :class="activeMobileIndex === index ? 'bg-black/10' : 'bg-black/40'"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-black/80 to-transparent">
-                            <span class="text-white text-xs font-heading tracking-wider uppercase">{{ video.label }}</span>
-                        </div>
-                        <!-- Border accent â€” thicker when active -->
-                        <div class="absolute top-0 left-0 h-full bg-primary transition-all duration-300" :class="activeMobileIndex === index ? 'w-1.5' : 'w-1 opacity-50'"></div>
-                        <!-- Sound indicator -->
-                        <div v-if="activeMobileIndex === index" class="absolute top-2 right-2 w-6 h-6 bg-primary/80 flex items-center justify-center">
-                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                            <video
+                                :ref="el => { if (el) mobileVideoRefs[index] = el }"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                muted loop playsinline
+                                preload="none"
+                                :data-src="video.mobileSrc"
+                                :data-mobile-index="index"
+                            >
+                                <source :src="video.mobileSrc" type="video/mp4">
+                            </video>
+                            <div class="absolute inset-0 transition-colors duration-300" :class="activeMobileIndex === index ? 'bg-black/10' : 'bg-black/40'"></div>
+                            
+                            <!-- Video Info Overlay -->
+                            <div class="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-black/80 to-transparent">
+                                <span class="text-white text-xs font-heading tracking-wider uppercase">{{ video.label }}</span>
+                            </div>
+
+                            <!-- Active Indicator Border -->
+                            <div class="absolute top-0 left-0 h-full bg-primary transition-all duration-300" :class="activeMobileIndex === index ? 'w-1.5' : 'w-0'"></div>
+                            
+                            <!-- Center Indicator Label -->
+                            <div v-if="activeMobileIndex === index" class="absolute top-4 left-4 bg-primary px-3 py-1">
+                                <span class="text-white text-[10px] font-heading tracking-widest uppercase">Watching</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Floating Mute Toggle for Mobile -->
+                    <button 
+                        @click="toggleGlobalMute"
+                        class="absolute bottom-10 right-0 z-20 w-12 h-12 bg-primary flex items-center justify-center shadow-2xl hover:bg-primary-focus transition-colors"
+                    >
+                        <svg v-if="isGlobalMuted" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                        </svg>
+                        <svg v-else class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -77,7 +97,10 @@
                         The <span class="text-primary">Gallery.</span>
                     </h2>
                     <p class="text-md md:text-lg text-base-content/80 font-body font-normal leading-relaxed max-w-2xl">
-                        12 years of training, 5 years of coaching, every video is real proof of dedication and transformation built alongside our members. Hover to unmute.
+                        12 years of training, 5 years of coaching, every video is real proof of dedication and transformation built alongside our members.
+                    </p>
+                    <p class="text-xs text-base-content/80 font-body font-normal leading-relaxed max-w-2xl -mb-4">
+                        *Click anywhere on the page to unlock sound on hover.
                     </p>
                 </div>
 
@@ -90,10 +113,10 @@
                         @mouseenter="handleHover(index, true)"
                         @mouseleave="handleHover(index, false)"
                     >
-                        <!-- Video â€” preload="none", loaded via IntersectionObserver -->
+                        <!-- Video — preload="none", loaded via IntersectionObserver -->
                         <video
                             :ref="el => { if (el) videoRefs[index] = el }"
-                            class="bento-video w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            class="bento-video w-full h-full object-cover transition-transform duration-500"
                             muted loop playsinline
                             preload="none"
                             :poster="video.poster"
@@ -132,43 +155,37 @@ const videoRefs = ref([])
 const mobileVideoRefs = ref([])
 let desktopObserver = null
 let mobileObserver = null
+const isGlobalMuted = ref(true)
+
+// ── FIX: track hovered cells so the IntersectionObserver never pauses them ──
+const hoveredIndexes = new Set()
+// ─────────────────────────────────────────────────────────────────────────────
 
 // ==========================================
-// VIDEO DATA â€” with adaptive resolution per cell size
+// VIDEO DATA — with adaptive resolution per cell size
 // ==========================================
-// Cell sizes:  large (4 col) => w_400, medium (3 col) => w_300, small (2 col) => w_250
-// All: fps_20 for smooth but lightweight, du_8 for short loops, f_auto for best codec
-// q_auto:low for aggressive quality optimization
-
 const BASE = 'https://res.cloudinary.com/workstation-/video/upload'
 
-// Helper to build optimized Cloudinary URL
 function vidUrl(name, width = 300) {
     return `${BASE}/f_auto,q_auto,w_${width},fps_24,du_20/${name}`
 }
 
-// Helper to build poster (first frame as image)
 function posterUrl(name) {
     return `${BASE}/f_auto,q_auto,w_300,so_0/${name}.jpg`
 }
 
-// Cell size mapping: index -> size category
-// Based on the grid layout:
-// Large (4col x 2row): v9(idx 8), v13(idx 12), v15(idx 14) => w_400
-// Medium (3col x 1row): v4(idx 3), v5(idx 4), v7(idx 6), v8(idx 7), v10(idx 9), v11(idx 10) => w_300
-// Small (2col): v1(idx 0), v2(idx 1), v3(idx 2), v6(idx 5), v12(idx 11), v14(idx 13) => w_250
 const cellWidths = {
-    0: 300, 1: 300, 2: 300,  // v1, v2, v3
-    3: 350, 4: 350,           // v4, v5
-    5: 350,                   // v6
-    6: 350, 7: 350,           // v7, v8
-    8: 1000,                   // v9 (large)
-    9: 350,                   // v10
-    10: 350,                  // v11
-    11: 350,                  // v12
-    12: 450,                  // v13 (large)
-    13: 350,                  // v14
-    14: 450,                  // v15 (large)
+    0: 300, 1: 300, 2: 300,
+    3: 350, 4: 350,
+    5: 350,
+    6: 350, 7: 350,
+    8: 1000,
+    9: 350,
+    10: 350,
+    11: 350,
+    12: 450,
+    13: 350,
+    14: 450,
 }
 
 const videoNames = [
@@ -209,7 +226,7 @@ const videoLabels = [
 
 const videos = ref(videoNames.map((name, i) => ({
     desktopSrc: vidUrl(name, cellWidths[i] || 300),
-    mobileSrc: vidUrl(name, 200),  // Very small for mobile thumbnails
+    mobileSrc: vidUrl(name, 200),
     poster: posterUrl(name),
     ...videoLabels[i]
 })))
@@ -219,35 +236,37 @@ function getMobileBgSrc() {
 }
 
 // ==========================================
-// INTERSECTION OBSERVER â€” Staggered Loading
+// INTERSECTION OBSERVER — Staggered Loading
 // ==========================================
 function setupDesktopObserver() {
     desktopObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const video = entry.target
             const index = parseInt(video.dataset.index)
-            
+
             if (entry.isIntersecting) {
-                // Stagger loading: delay based on index to avoid all loading at once
-                const delay = index * 200 // 200ms between each video start
+                const delay = index * 100
                 setTimeout(() => {
                     if (!video.src && video.dataset.src) {
                         video.src = video.dataset.src
-                        video.load()
                     }
-                    video.play().catch(() => {}) // Silently handle autoplay block
+                    if (video.paused) {
+                        video.play().catch(() => {})
+                    }
                 }, delay)
-                // Only trigger load+play when entering viewport (no pause on exit!)
-                // Reason: hover's scale-105 CSS transform briefly triggers an 'exit'
-                // event in the observer â€” causing video.pause() to fire incorrectly.
+            } else {
+                // ── FIX 1: skip pause if the user is hovering this cell ──────
+                if (!hoveredIndexes.has(index)) {
+                    video.pause()
+                }
+                // ─────────────────────────────────────────────────────────────
             }
         })
     }, {
-        rootMargin: '200px 0px', // Start loading 200px before entering viewport
-        threshold: 0.1
+        rootMargin: '100px 0px',
+        threshold: 0.05
     })
 
-    // Observe all desktop videos
     nextTick(() => {
         videoRefs.value.forEach(video => {
             if (video) desktopObserver.observe(video)
@@ -255,99 +274,111 @@ function setupDesktopObserver() {
     })
 }
 
-// Active mobile video index
+// ==========================================
+// HOVER HANDLER
+// ==========================================
+// ==========================================
+// HOVER HANDLER
+// ==========================================
+function handleHover(index, isEnter) {
+    const video = videoRefs.value[index]
+    if (!video) return
+
+    if (isEnter) {
+        // ── FIX 2: register hover so observer won't pause this video ─────────
+        hoveredIndexes.add(index)
+        
+        // ── FIX 3: load src if not yet loaded ──────────
+        if (!video.src && video.dataset.src) {
+            video.src = video.dataset.src
+        }
+        
+        // Nyalakan suara
+        video.muted = false
+        video.volume = 0.3
+        
+        // FIX UTAMA: Hanya jalankan play() JIKA video sedang pause.
+        // Jika sudah jalan, kita cukup mengubah property muted di atas tanpa memanggil play() lagi.
+        if (video.paused) {
+            video.play().catch(() => {
+                // Jatuh ke sini jika browser memblokir audio (karena user belum klik web)
+                video.muted = true
+                video.play().catch(() => {})
+            })
+        }
+    } else {
+        hoveredIndexes.delete(index) 
+        video.muted = true
+        // intentionally NOT pausing — keep playing muted on mouse leave
+    }
+}
+
+// ==========================================
+// MOBILE (unchanged from original)
+// ==========================================
 const activeMobileIndex = ref(0)
 const mobileScrollContainer = ref(null)
 let mobileScrollTimeout = null
 
 function setupMobileObserver() {
-    // Lazy-load mobile videos as they enter the scroll view
     mobileObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const video = entry.target
+            const index = parseInt(video.dataset.mobileIndex)
+
             if (entry.isIntersecting) {
-                // Load the video src if not loaded yet
+                // Load video source if needed
                 if (video.dataset.src && !video.getAttribute('src')) {
-                    // The <source> tag already has the src,
-                    // just trigger load & play when visible
                     video.load()
                 }
+
+                // Jika video muncul lebih dari 70% di layar, jadikan aktif
+                if (entry.intersectionRatio > 0.7) {
+                    if (activeMobileIndex.value !== index) {
+                        updateActiveMobileVideo(index)
+                    }
+                }
+            } else {
+                video.pause()
             }
         })
     }, {
         root: mobileScrollContainer.value,
-        rootMargin: '100px 0px',
-        threshold: 0.1
+        threshold: [0, 0.5, 0.7, 1.0] // Pantau beberapa titik perubahan
     })
 
     nextTick(() => {
         mobileVideoRefs.value.forEach(video => {
             if (video) mobileObserver.observe(video)
         })
-        // Initial: play & unmute the first (center) video
         updateActiveMobileVideo(0)
     })
 }
 
-function onMobileScroll() {
-    clearTimeout(mobileScrollTimeout)
-    mobileScrollTimeout = setTimeout(() => {
-        if (!mobileScrollContainer.value) return
-        const container = mobileScrollContainer.value
-        const scrollLeft = container.scrollLeft
-        const maxScroll = container.scrollWidth - container.clientWidth
-        const totalVideos = mobileVideoRefs.value.filter(Boolean).length
+// onMobileScroll dihapus karena sudah dihandle oleh IntersectionObserver yang lebih smooth
+function onMobileScroll() {}
 
-        // Edge case: at the very start â†’ first video
-        if (scrollLeft <= 10) {
-            if (activeMobileIndex.value !== 0) updateActiveMobileVideo(0)
-            return
+function toggleGlobalMute() {
+    isGlobalMuted.value = !isGlobalMuted.value
+    const currentVideo = mobileVideoRefs.value[activeMobileIndex.value]
+    if (currentVideo) {
+        currentVideo.muted = isGlobalMuted.value
+        if (!isGlobalMuted.value) {
+            currentVideo.volume = 0.6
+            currentVideo.play().catch(() => {})
         }
-
-        // Edge case: at the very end â†’ last video
-        if (scrollLeft >= maxScroll - 10) {
-            const lastIndex = totalVideos - 1
-            if (activeMobileIndex.value !== lastIndex) updateActiveMobileVideo(lastIndex)
-            return
-        }
-
-        // Normal: find the closest video to the center
-        const containerCenter = scrollLeft + container.clientWidth / 2
-
-        let closestIndex = 0
-        let closestDistance = Infinity
-
-        mobileVideoRefs.value.forEach((video, index) => {
-            if (!video) return
-            const card = video.closest('.snap-center')
-            if (!card) return
-            const cardCenter = card.offsetLeft - container.offsetLeft + card.offsetWidth / 2
-            const distance = Math.abs(containerCenter - cardCenter)
-            if (distance < closestDistance) {
-                closestDistance = distance
-                closestIndex = index
-            }
-        })
-
-        if (closestIndex !== activeMobileIndex.value) {
-            updateActiveMobileVideo(closestIndex)
-        }
-    }, 100)
+    }
 }
 
 function updateActiveMobileVideo(newIndex) {
-    // Pause + mute all mobile videos
     mobileVideoRefs.value.forEach((video, i) => {
         if (!video) return
         if (i === newIndex) {
-            video.muted = false
-            video.volume = 0.4
+            video.muted = isGlobalMuted.value
+            video.volume = 0.6
             if (video.readyState >= 2) {
-                // Already has data â€” play immediately
                 video.play().catch(() => {})
             } else {
-                // Not loaded yet â€” load first, then play when ready
-                video.load()
                 video.addEventListener('canplay', () => {
                     video.play().catch(() => {})
                 }, { once: true })
@@ -355,30 +386,16 @@ function updateActiveMobileVideo(newIndex) {
         } else {
             video.muted = true
             video.pause()
+            video.currentTime = 0
         }
     })
     activeMobileIndex.value = newIndex
 }
 
 // ==========================================
-// HOVER HANDLER
-// ==========================================
-function handleHover(index, isEnter) {
-    const video = videoRefs.value[index]
-    if (!video) return
-    if (isEnter) {
-        video.muted = false
-        video.volume = 0.3
-    } else {
-        video.muted = true
-    }
-}
-
-// ==========================================
 // LIFECYCLE
 // ==========================================
 onMounted(() => {
-    // Only setup observer for the current view (mobile or desktop)
     if (window.innerWidth >= 1024) {
         setupDesktopObserver()
     } else {
@@ -394,30 +411,8 @@ onUnmounted(() => {
 
 <style scoped>
 /* =========================================
-   BENTO GRID â€” 10 COLUMNS, 15 VIDEOS
+   BENTO GRID — 10 COLUMNS, 15 VIDEOS
    ========================================= */
-
-/*
-    LAYOUT MAP (Desktop):
-    Each row = 10 columns. 6 rows total.
-    
-    Row 1:  v1  v1  | v2  v2  v2  | v3  v3  | v4  v4  v4
-    Row 2:  v1  v1  | v5  v5  v5  | v6  v6  | v7  v7  v7
-    Row 3:  v8  v8  v8  | v9  v9  v9  v9  | v10 v10 v10
-    Row 4:  v11 v11 v11 | v9  v9  v9  v9  | v12 v12 v12
-    Row 5:  v13 v13 v13 v13 | v14 v14 | v15 v15 v15 v15
-    Row 6:  v13 v13 v13 v13 | v14 v14 | v15 v15 v15 v15
-    
-    Variety:
-    - v1:  2 cols Ã— 2 rows  (Tall / Vertical)
-    - v9:  4 cols Ã— 2 rows  (Large Landscape)
-    - v13: 4 cols Ã— 2 rows  (Large Landscape)
-    - v14: 2 cols Ã— 2 rows  (Tall / Vertical)
-    - v15: 4 cols Ã— 2 rows  (Large Landscape)
-    - Rest: various 2-3 col Ã— 1 row (Standard)
-*/
-
-
 
 .bento-grid {
     display: grid;
@@ -433,14 +428,12 @@ onUnmounted(() => {
         "v13 v13 v13 v13 v14 v14 v15 v15 v15 v15";
 }
 
-/* XL: taller rows */
 @media (min-width: 1280px) {
     .bento-grid {
         grid-template-rows: repeat(6, 170px);
     }
 }
 
-/* Area assignments */
 .area-v1  { grid-area: v1; }
 .area-v2  { grid-area: v2; }
 .area-v3  { grid-area: v3; }
@@ -457,8 +450,12 @@ onUnmounted(() => {
 .area-v14 { grid-area: v14; }
 .area-v15 { grid-area: v15; }
 
+.snap-stop-always {
+    scroll-snap-stop: always;
+}
+
 /* =========================================
-   CELL STYLING â€” Sharp Industrial
+   CELL STYLING — Sharp Industrial
    ========================================= */
 
 .bento-cell {
@@ -475,21 +472,18 @@ onUnmounted(() => {
 
 .bento-cell:hover {
     border-left-width: 5px;
-
     z-index: 5;
     box-shadow: 
         0 0 30px rgba(0,70,222,0.2),
         inset 0 0 60px rgba(0,70,222,0.05);
 }
 
-/* GPU acceleration for video elements */
 .bento-video {
     will-change: transform;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
-/* Cut corner on hover */
 .bento-cell::after {
     content: '';
     position: absolute;
@@ -507,7 +501,6 @@ onUnmounted(() => {
     opacity: 1;
 }
 
-/* Bottom-left bracket */
 .bento-cell::before {
     content: '';
     position: absolute;
@@ -526,7 +519,7 @@ onUnmounted(() => {
 }
 
 /* =========================================
-   MOBILE SCROLL â€” hide scrollbar
+   MOBILE SCROLL — hide scrollbar
    ========================================= */
 
 .scrollbar-hide {
@@ -537,5 +530,3 @@ onUnmounted(() => {
     display: none;
 }
 </style>
-
-
