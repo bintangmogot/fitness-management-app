@@ -1,7 +1,6 @@
 <template>
   <div>
     <Hero3 />
-    <!-- <Hero /> -->
     <About />
     <BentoGrid />
     <Transforms />
