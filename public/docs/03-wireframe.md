@@ -1,5 +1,5 @@
 # 🎨 Wireframe
-## Website Coach Yohan - MVP (Level 1)
+## Personal Training & Nutrition Management System - System UI
 
 ---
 
@@ -527,6 +527,92 @@ other colors:
 │  └────────────┘  │
 │                  │
 └──────────────────┘
+```
+
+---
+
+## Level 2: Nutrition Tracker (Concept)
+### `/nutrition`
+
+*Build Your Own Plate* interface where users can select food items and see real-time macro updates.
+
+### Desktop Version
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│  [LOGO]                                                 [Menu]  │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   ┌───────────────────────┐   ┌─────────────────────────────┐   │
+│   │   DYNAMIC PLATE       │   │  SELECT INGREDIENTS         │   │
+│   │   VISUALIZER          │   │  ──────────────────       │   │
+│   │                       │   │  [+] Grilled Chicken    $X  │   │
+│   │    (Animations of     │   │  [+] Brown Rice         $X  │   │
+│   │    food on plate)     │   │  [+] Steamed Broccoli   $X  │   │
+│   │                       │   │                             │   │
+│   └───────────────────────┘   └─────────────────────────────┘   │
+│                                                                 │
+│   ┌─────────────────────────────────────────────────────────┐   │
+│   │  MACROS:  🔥 450 kcal  |  🥩 40g Pro  |  🍚 30g Carbs   │   │
+│   └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│   ┌─────────────────────────────────────────────────────────┐   │
+│   │                     ORDER NOW ($XX)                     │   │
+│   └─────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Level 3: Gym Booking Calendar (Concept)
+### `/booking`
+
+*Interactive calendar for users who purchased training packages.*
+
+### Desktop Version
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   PACKAGE: 10 SESSIONS             REMAINING: 7 SESSIONS        │
+│                                                                 │
+│   ┌─────────────────────────────────────────────────────────┐   │
+│   │  <  MARCH 2026  >                                       │   │
+│   │  MON  TUE  WED  THU  FRI  SAT  SUN                      │   │
+│   │   1    2    3    4    5    6    7                       │   │
+│   │   8   [9]  [10]  11   12   13   14                      │   │
+│   │   15   16  [17]  18   19   20   21                      │   │
+│   │                                                         │   │
+│   │  * [ ] = Selected Days (Pending Admin Approval)         │   │
+│   └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│   ┌─────────────────────────────────────────────────────────┐   │
+│   │                   SUBMIT SCHEDULE                       │   │
+│   └─────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Level 4: E-Commerce Shop (Concept)
+### `/shop`
+
+*Catalog of gym items like protein powder, dumbbells, apparel.*
+
+### Desktop Version
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│   GYM ESSENTIALS                                      🛒 [2]    │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   [🔍 Search Products...]    [Filter: Supplements | Gear]       │
+│                                                                 │
+│   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐           │
+│   │ [Image]     │   │ [Image]     │   │ [Image]     │           │
+│   │ Whey Pro    │   │ Dumbbell 5k │   │ Protein Bar │           │
+│   │ $XX.XX      │   │ $XX.XX      │   │ $XX.XX      │           │
+│   │ [+ CART]    │   │ [+ CART]    │   │ [+ CART]    │           │
+│   └─────────────┘   └─────────────┘   └─────────────┘           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---

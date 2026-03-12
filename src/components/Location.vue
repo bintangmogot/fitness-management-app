@@ -99,7 +99,7 @@
         </div>
 
         <!-- Right: Map Embed -->
-        <div class="flex flex-col h-[500px] lg:h-auto min-h-[400px] w-full bg-base-200 border-5 xl:border-8 border-primary relative overflow-hidden shadow-lg group">
+        <div class="hidden md:flex flex-col h-[500px] lg:h-auto min-h-[400px] w-full bg-base-200 border-5 xl:border-8 border-primary relative overflow-hidden shadow-lg group">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.4093867375276!2d115.13083627589578!3d-8.652516691394336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2489823028e3b%3A0x69661414434914c0!2sAvenue%20Fitness%20Canggu!5e0!3m2!1sen!2sid!4v1707577882431!5m2!1sen!2sid" 
                 width="100%" 
