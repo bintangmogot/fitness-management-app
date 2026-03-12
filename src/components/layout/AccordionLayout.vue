@@ -44,20 +44,28 @@ const props = defineProps({
     type: Array,
     default: () => [
       {
-        question: "How do I create an account?",
-        answer: "Click the \"Sign Up\" button in the top right corner and follow the registration process."
+        question: "Where do we train?",
+        answer: "I am primarily based at Avenue Fitness Canggu, but I also serve the wider Badung region and Denpasar area for private sessions."
       },
       {
-        question: "I forgot my password. What should I do?",
-        answer: "Click on \"Forgot Password\" on the login page and follow the instructions sent to your email."
+        question: "Do you offer online coaching?",
+        answer: "Yes! If you're not in Bali or prefer to train at your own gym, I provide comprehensive online coaching including workout plans and nutrition tracking."
       },
       {
-        question: "How do I update my profile information?",
-        answer: "Go to \"My Account\" settings and select \"Edit Profile\" to make changes."
+        question: "What is included in the transformation package?",
+        answer: "Our premium packages typically include 1-on-1 PT sessions, a customized training split, and a personalized meal plan."
       },
       {
-        question: "Is there a mobile app available?",
-        answer: "Yes, you can download our mobile app from the App Store and Google Play Store for easy access."
+        question: "How long is each PT session?",
+        answer: "Each personal training session lasts for 60 minutes, focused on high-intensity work and proper form execution."
+      },
+      {
+        question: "I am a beginner, can I join?",
+        answer: "Absolutely. I work with all fitness levels, from absolute beginners to advanced athletes. We'll start at your current level and build your foundation safely."
+      },
+      {
+        question: "How do I book a consultation?",
+        answer: "Simply click the 'Book a Call' or WhatsApp buttons across the site to schedule a free initial consultation where we'll discuss your goals."
       }
     ]
   }
