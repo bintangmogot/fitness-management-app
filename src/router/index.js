@@ -15,14 +15,14 @@ const routes = [
     }
   },
   {
-    path: '/food',
-    name: 'Food',
-    component: () => import('../pages/FoodPage.vue'),
+    path: '/about',
+    name: 'About',
+    component: () => import('../pages/AboutPage.vue'),
     meta: {
-      title: 'Healthy Food & Nutrition Plans | Coach Yohanes Bali',
-      description: 'Custom nutrition strategies and healthy food guides to complement your fitness journey in Bali with Coach Yohanes.'
+      title: 'About Coach Yohanes - Personal Trainer Canggu | Bali Fitness Coach',
+      description: 'Learn more about Coach Yohanes, a professional personal trainer in Canggu, Bali. Discover his expertise and journey in fitness.'
     }
-  },
+  }, 
   {
     path: '/clients',
     name: 'Clients',
@@ -42,6 +42,33 @@ const routes = [
     }
   },
   {
+    path: '/food',
+    name: 'Food',
+    component: () => import('../pages/FoodPage.vue'),
+    meta: {
+      title: 'Healthy Food & Nutrition Plans | Coach Yohanes Bali',
+      description: 'Custom nutrition strategies and healthy food guides to complement your fitness journey in Bali with Coach Yohanes.'
+    }
+  },
+  {
+    path: '/my-activities',
+    name: 'MyActivities',
+    component: () => import('../pages/MyActivitiesPage.vue'),
+    meta: {
+      title: 'My Activities | Coach Yohanes',
+      description: 'View your past and upcoming activities with Coach Yohanes in Canggu, Bali.'
+    }
+  }, 
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../pages/ContactPage.vue'),
+    meta: {
+      title: 'Contact Coach Yohanes - Personal Trainer Canggu | Bali Fitness Coach',
+      description: 'Get in touch with Coach Yohanes for personal training services in Canggu, Bali. Contact us for more information.'
+    }
+  },
+  {
     path: '/tips',
     name: 'Tips',
     component: () => import('../pages/TipsPage.vue'),
@@ -49,7 +76,7 @@ const routes = [
       title: 'Bali Fitness Blog & Training Tips | Coach Yohanes',
       description: 'Expert insights on training, nutrition, and staying fit in Bali. Read the latest tips from Coach Yohanes.'
     }
-  }
+  }, 
 ]
 
 const router = createRouter({
@@ -72,7 +99,7 @@ router.afterEach((to) => {
   // Update Title
   const defaultTitle = 'Coach Yohanes - Personal Trainer Bali';
   document.title = to.meta.title || defaultTitle;
-
+  
   // Update Meta Description
   const description = to.meta.description || 'Professional Personal Trainer in Canggu, Bali.';
   const metaDescription = document.querySelector('meta[name="description"]');

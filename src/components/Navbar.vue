@@ -116,14 +116,13 @@ import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 const navigation = [
-  { name: 'ABOUT', to: '/#about' },
-  { name: 'GALLERY', to: '/#gallery' },
-  { name: 'TRANSFORMS', to: '/#transforms' },
-  { name: 'SERVICES', to: '/#services'},
+  { name: 'ABOUT', to: '/about' },
+  { name: 'CLIENTS', to: '/clients' },
+  { name: 'SERVICES', to: '/services' },
+  { name: 'FOOD', to: '/food' },
+  { name: 'MY ACTIVITIES', to: '/my-activities' },
+  { name: 'CONTACT', to: '/contact' },
   { name: 'TIPS', to: '/tips' },
-  { name: 'PROGRAMS', to: '/#programs' },
-  { name: 'FOOD', to: '/#food' },
-  { name: 'CONSULTATION', to: '/#consultation' },
 ]
 
 const mobileMenuOpen = ref(false)
