@@ -99,9 +99,9 @@
             <div 
               v-for="(chunk, cIndex) in desktopChunks" 
               :key="cIndex" 
-              class="w-full shrink-0"
+              class="shrink-0 mx-auto"
             >
-              <div class="grid grid-cols-3 gap-5 xl:gap-6">
+              <div class="grid grid-cols-2 gap-5 xl:gap-6">
                 <div 
                   v-for="(client, i) in chunk" 
                   :key="i" 
@@ -113,7 +113,7 @@
                     <img 
                       :src="client.image" 
                       :alt="client.title" 
-                      class="w-full aspect-9/16 object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                      class="max-h-[500px] aspect-9/16 object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
                     />
                     
                     <!-- Tag badge -->
@@ -231,34 +231,7 @@ const clients = [
     desc: "Gained 5kg lean muscle",
     metric: "+5 KG"
   },
-  {
-    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/client2",
-    title: "Post-Pregnancy",
-    tag: "Recovery",
-    desc: "Back in shape in 4 months",
-    metric: "4 MO"
-  },
-  {
-    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/client-clemens",
-    title: "Strength Consult",
-    tag: "Strength",
-    desc: "Doubled lifting PRs",
-    metric: "2X PR"
-  },
-  {
-    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/client1",
-    title: "Lifestyle Change",
-    tag: "Wellness",
-    desc: "Healthy habits for life",
-    metric: "100%"
-  },
-  {
-    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/client2",
-    title: "Competition Prep",
-    tag: "Bodybuilding",
-    desc: "Stage ready in 12 weeks",
-    metric: "12 WK"
-  }
+
 ];
 
 // ==========================================

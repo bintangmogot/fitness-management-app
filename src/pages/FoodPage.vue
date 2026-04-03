@@ -11,7 +11,7 @@
                 </div>
                 <!-- Desktop button -->
                 <div class="hidden md:flex flex-row w-full h-full justify-end self-end">
-                     <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'd%20like%20to%20pre-order%20a%20meal%20plan.%20Can%20you%20share%20more%20details%3F" target="_blank" class="flex flex-row items-center gap-3 bg-primary px-8 py-3 text-button font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift">
+                     <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20interested%20in%20your%20Meal%20Plan%20service.%20I'd%20love%20to%20get%20more%20info%20about%20pre-ordering%20macros-calculated%20meals%20in%20Bali.%20Thank%20you!" target="_blank" class="flex flex-row items-center gap-3 bg-primary px-8 py-3 text-button font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
                     </svg>
@@ -134,7 +134,7 @@
 
              <!-- Mobile button -->
              <div class="flex md:hidden flex-row w-full justify-center">
-                <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'd%20like%20to%20pre-order%20a%20meal%20plan.%20Can%20you%20share%20more%20details%3F" target="_blank" class="flex flex-row items-center gap-3 bg-primary px-8 py-3 text-button font-heading text-white shadow-card hover:bg-primary-focus transition-all hover-lift w-full justify-center">
+                <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I'm%20interested%20in%20your%20Meal%20Plan%20service.%20I'd%20love%20to%20get%20more%20info%20about%20pre-ordering%20macros-calculated%20meals%20in%20Bali.%20Thank%20you!" target="_blank" class="flex flex-row items-center gap-3 bg-primary px-8 py-3 text-button font-heading text-white shadow-card hover:bg-primary-focus transition-all hover-lift w-full justify-center">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z"/>
                 </svg>

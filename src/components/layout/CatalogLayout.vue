@@ -95,7 +95,7 @@ defineProps({
   },
   buttonHref: {
     type: String,
-    default: 'https://wa.me/6285939533337'
+    default: 'https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I\'m%20interested%20in%20the%20nutrition%20products%20from%20your%20catalog.%20Could%20you%20provide%20more%20details%20on%20how%20to%20order?'
   },
   showDivider: {
     type: Boolean,

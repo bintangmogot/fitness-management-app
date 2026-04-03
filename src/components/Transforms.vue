@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <section class="py-20 px-6 md:px-12 lg:px-20 xl:px-30 bg-base-200" id="transforms">
     <div class="flex flex-col items-center gap-12 max-w-7xl mx-auto">
       
@@ -44,7 +44,7 @@
         <!-- Mobile: Horizontal Scroll | Desktop: Grid 3 Cols (Paged) -->
         <div 
           ref="scrollContainer"
-          class="w-full flex items-stretch overflow-x-auto snap-x snap-mandatory gap-6 pb-8 md:grid md:grid-cols-3 md:overflow-visible scrollbar-hide transition-all duration-500"
+          :class="['w-full flex items-stretch overflow-x-auto snap-x snap-mandatory gap-6 pb-8 md:overflow-visible scrollbar-hide transition-all duration-500', transforms.length < 3 ? 'md:flex md:justify-center' : 'md:grid md:grid-cols-3']"
           @scroll="handleScroll"
         >
           
@@ -52,12 +52,12 @@
           <div 
             v-for="(item, index) in displayedItems" 
             :key="item.id" 
-            class="min-w-[85%] md:min-w-0 snap-center flex flex-col bg-base-100 shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer border-l-4 md:border-l-6 border-primary xl:border-primary/50 xl:hover:border-primary animate-fade-in"
+            :class="['min-w-[85%] md:min-w-0 snap-center flex flex-col bg-base-100 shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer border-l-4 md:border-l-6 border-primary xl:border-primary/50 xl:hover:border-primary animate-fade-in', transforms.length < 3 ? 'md:w-[400px]' : 'md:min-w-0']"
             @click="openVideo(item.video)"
           >
             
-            <!-- Video Thumbnail (9:16) -->
-            <div class="relative w-full aspect-3/4 bg-base-200 overflow-hidden">
+            <!-- Video Thumbnail (Adaptive Ratio) -->
+            <div class="relative w-full aspect-4/3 md:aspect-3/4 bg-base-200 overflow-hidden">
               <img :src="item.image" :alt="item.author" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               
               <!-- Play Button Overlay -->
@@ -127,7 +127,7 @@
 
       <!-- CTA -->
       <div class="flex flex-col items-center mt-4">
-        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I%20want%20to%20start%20today.%20Please%20help%20me%20choose%20the%20best%20program%20for%20my%20goals.%20Thank%20you!%0AI'm%20interested%20in%20your%20program." target="_blank" class="bg-primary px-8 py-3 text-button font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift w-full sm:w-auto">START YOUR JOURNEY</a>
+        <a href="https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I%20just%20saw%20the%20transformation%20results%20on%20your%20website%20and%20they%20are%20inspiring!%20I'm%20ready%20to%20start%20my%20own%20journey.%20Can%20we%20discuss%20a%20personal%20training%20plan%20for%20me?" target="_blank" class="bg-primary px-8 py-3 text-button font-heading text-primary-content shadow-card hover:bg-primary-focus transition-all hover-lift w-full sm:w-auto">START YOUR JOURNEY</a>
       </div>
 
     </div>
@@ -185,53 +185,8 @@ const transforms = [
     video: "https://res.cloudinary.com/workstation-/video/upload/q_auto,w_1280/gym-yohanes/videos/test1", 
     headline: "Best Decision Ever",
     text: "I came to Bali feeling out of shape. 3 months with Yohan changed everything. The accountability is next level.",
-    author: "Sarah J.",
-    role: "Marketing"
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600&h=1066",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4", // mmy Direct MP4
-    headline: "More Than Just Training",
-    text: "It's not just about lifting weights. It's about mindset. I've never felt stronger, physically and mentally.",
-    author: "Mike T.",
+    author: "Bebo",
     role: "Entrepreneur"
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600&h=1066",
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    headline: "Finally, Results!",
-    text: "I've tried every diet and program out there. This is the only one that stuck. Sustainable and effective.",
-    author: "Emily R.",
-    role: "Designer"
-  },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=600&h=1066", 
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
-    headline: "Confidence Boost",
-    text: "Training with Yohan gave me the confidence to wear a bikini again after 5 years. Truly life changing.",
-    author: "Jessica M.",
-    role: "Teacher"
-  },
-  {
-    id: 5,
-    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=600&h=1066", 
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    headline: "Stronger Every Day",
-    text: "The structured program allowed me to progress safely without injuries. I'm lifting heavier than ever.",
-    author: "David K.",
-    role: "Developer"
-  },
-  {
-    id: 6,
-    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&q=80&w=600&h=1066", 
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    headline: "Bali Fitness King",
-    text: "If you are in Bali, you MUST train with Yohan. The energy and expertise he brings is unmatched.",
-    author: "Alex B.",
-    role: "Nomad"
   }
 ];
 

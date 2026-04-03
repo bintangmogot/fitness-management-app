@@ -14,7 +14,7 @@
     </slot>
 
     <!-- Pricing Cards -->
-    <div class="flex flex-row gap-8 mx-auto items-stretch xl:justify-center overflow-x-auto snap-x snap-mandatory px-4 lg:px-0 scrollbar-hide pb-12 pt-10">
+    <div class="flex flex-row gap-8 mx-auto items-stretch xl:justify-start overflow-x-auto snap-x snap-mandatory px-4 lg:px-0 scrollbar-hide pb-12 pt-10">
       <div v-for="(pkg, index) in packages" :key="index"
         :class="[
           'p-8 md:p-10 border border-t-4 shadow-card hover:shadow-card-hover transition-all hover:-translate-y-2 flex flex-col h-full relative group shrink-0 snap-center',
@@ -128,43 +128,62 @@ defineProps({
       {
         name: 'STARTER',
         subtitle: 'THE KICKSTART',
-        price: '7 MIL',
+        price: '700K',
         currency: 'IDR',
         isPopular: false,
-        buttonHref: 'https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20STARTER%20package',
+        buttonHref: 'https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I\'m%20interested%20in%20the%20STARTER%20package%20to%20kickstart%20my%20fitness%20journey.%20Could%20you%20guide%20me%20on%20how%20to%20get%20started?',
+        features: [
+          { text: '<strong>1 PT Sessions</strong> (1hr)', included: true },
+          { text: 'Custom Training Plan', included: true },
+          { text: 'Full Workout Guide', included: true },
+          { text: 'Full Meal Plan & Macros', included: false },
+          { text: '24/6 Coach Support', included: false },
+        ]
+      },
+      {
+        name: 'MOMENTUM',
+        subtitle: 'THE CONSISTENCY',
+        price: '6.5 MIL',
+        currency: 'IDR',
+        isPopular: false,
+        buttonHref: 'https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I\'m%20interested%20in%20the%20MOMENTUM%20package.%20I\'m%20ready%20to%20build%20consistency%20in%20my%20training.%20How%20do%20we%20begin?',
         features: [
           { text: '<strong>10 PT Sessions</strong> (1hr)', included: true },
           { text: 'Custom Training Plan', included: true },
-          { text: 'Full Meal Plan & Macros', included: false },
-          { text: 'Full Workout Guide', included: false }
+          { text: 'Full Workout Guide', included: true },
+          { text: 'Meal Plan & Macros', included: true },
+          { text: '24/6 Coach Support', included: false }
         ]
       },
       {
         name: 'COMMIT',
         subtitle: 'THE TRANSFORMATION',
-        price: '10 MIL',
+        price: '12 MIL',
         currency: 'IDR',
         isPopular: true,
-        buttonHref: 'https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20COMMIT%20package',
+        buttonHref: 'https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I\'m%20ready%20for%20a%20total%20transformation%20with%20the%20COMMIT%20package.%20I\'d%20love%20to%20discuss%20the%2020%20PT%20sessions%20program.',
         features: [
           { text: '<strong>20 PT Sessions</strong> (1hr)', included: true },
           { text: 'Custom Training Plan', included: true },
+          { text: 'Full Workout Guide', included: true },
           { text: 'Full Meal Plan & Macros', included: true },
-          { text: 'Full Workout Guide', included: true }
+          { text: '24/6 Coach Support', included: false }
+
         ]
       },
       {
         name: 'ELITE',
         subtitle: 'THE LIFESTYLE',
-        price: '15 MIL',
+        price: '18 MIL',
         currency: 'IDR',
         isPopular: false,
-        buttonHref: 'https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20ELITE%20package',
+        buttonHref: 'https://wa.me/6285939533337?text=Hi%20Coach%20Yohan!%20I\'m%20interested%20in%20the%20ELITE%20package%20to%20fully%20transform%20my%20lifestyle.%20Can%20we%20talk%20about%20starting%20the%2030%20PT%20sessions%20elite%20program?',
         features: [
           { text: '<strong>30 PT Sessions</strong> (1hr)', included: true },
           { text: 'Custom Training Plan', included: true },
           { text: 'Full Meal Plan & Macros', included: true },
-          { text: 'Full Workout Guide', included: true }
+          { text: 'Full Workout Guide', included: true },
+          { text: '24/6 Coach Support', included: true }
         ]
       }
     ]
