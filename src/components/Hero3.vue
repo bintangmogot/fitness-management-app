@@ -10,9 +10,9 @@
       <!-- Portrait as background-like element -->
       <div class="hero3-mobile-portrait" data-aos="fade" data-aos-duration="1000">
         <img
-          src="https://res.cloudinary.com/workstation-/image/upload/f_auto,q_auto/gym-yohanes/images/yohanes-bike"
+          src="https://res.cloudinary.com/workstation-/image/upload/f_auto,q_auto/gym-yohanes/images/yohanes-grassmc"
           alt="Coach Yohanes - Professional Personal Trainer in Canggu Bali"
-          class="w-full h-full object-cover bg-bottom"
+          class="w-full h-full object-cover object-bottom-right"
         />
         <!-- Dark overlay gradient for text readability -->
         <div class="hero3-mobile-overlay"></div>
@@ -67,16 +67,16 @@
 
       <!-- Main Portrait Photo -->
       <div
-        class="hero3-portrait"
+        class="hero3-portrait "
         :style="{
           transform: `translateX(${portraitTranslateX}vw) scale(${portraitScale})`,
           opacity: portraitOpacity,
         }"
       >
         <img
-          src="https://res.cloudinary.com/workstation-/image/upload/v1771686531/gym-yohanes/images/yohanes-bike"
+          src="https://res.cloudinary.com/workstation-/image/upload/v1771686531/gym-yohanes/images/yohanes-grassmc"
           alt="Coach Yohanes - Professional Personal Trainer in Canggu Bali"
-          class="w-full h-full object-cover border-10 border-white border-b-40"
+          class="w-full h-full object-cover object-right border-10 border-white border-b-40"
         />
       </div>
 
@@ -148,7 +148,7 @@ const mobileGallery = [
     alt: 'Gym Interior',
   },
   {
-    src: 'https://res.cloudinary.com/workstation-/image/upload/f_auto,q_auto,w_300/gym-yohanes/images/yohanes-grassmc',
+    src: 'https://res.cloudinary.com/workstation-/image/upload/f_auto,q_auto,w_300/gym-yohanes/images/yohanes-bike',
     alt: 'Client Clemens',
   },
   {
@@ -406,7 +406,7 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: right bottom;
 }
 
 /* Dark gradient overlay so text is readable */
@@ -469,8 +469,8 @@ onUnmounted(() => {
 .hero3-portrait {
   position: absolute;
   z-index: 8;
-  width: clamp(220px, 30vw, 500px);
-  height: clamp(300px, 45vh, 700px);
+  width: clamp(320px, 30vw, 500px);
+  height: clamp(400px, 30vh, 700px);
   overflow: hidden;
   will-change: transform, opacity;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
