@@ -30,7 +30,7 @@
             <div class="flex items-center gap-4 bg-base-100 p-4 border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
                 <CheckBadgeIcon class="w-8 h-8 text-base-content/80 shrink-0" />
                 <div>
-                  <h4 class="font-anton uppercase text-lg text-base-content/80">Ade Rai Certified</h4>
+                  <h4 class="font-anton uppercase text-lg text-base-content/80">Rai Institute Certified</h4>
                   <p class="text-xs text-base-content/60 uppercase tracking-wider font-semibold">Elite Certification</p>
                 </div>
             </div>

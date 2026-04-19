@@ -8,7 +8,6 @@
     <ClientsCarousel />
     <PricingLayout />
     <Location />
-    <MealPlan />
     <AccordionLayout />
     <CTALayout />
   </div>  
@@ -23,7 +22,6 @@ import CardsRowLayout from '../components/layout/CardsRowLayout.vue'
 import ClientsCarousel from '../components/ClientsCarousel.vue'
 import PricingLayout from '../components/layout/PricingLayout.vue'
 import Location from '../components/Location.vue'
-import MealPlan from '../components/MealPlan.vue'
 import AccordionLayout from '../components/layout/AccordionLayout.vue'
 import CTALayout from '../components/layout/CTALayout.vue'
 </script>
