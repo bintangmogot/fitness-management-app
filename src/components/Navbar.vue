@@ -111,9 +111,10 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { useRoute } from 'vue-router'
 
 const navigation = [
   { name: 'ABOUT', to: '/about' },
@@ -144,16 +145,30 @@ onMounted(() => {
 // ============================================================
 // OPSI 2 (AKTIF — Toggle manual, selalu mulai dari Light Mode)
 // ============================================================
+const route = useRoute()
+
 const isDark = ref(false)
 const isVisible = ref(false)
 
 const handleScroll = () => {
+  if (route.path !== '/') {
+    isVisible.value = true
+    return
+  }
+
   const isMobile = window.innerWidth < 768
   // Mobile: muncul lebih cepat (250px)
-  // Desktop: muncul setelah Hero3 selesai (350vh - 100vh = 350vh)
-  const threshold = isMobile ? 250 : window.innerHeight * 3.5
+  // Desktop: muncul setelah 300vh di homepage
+  const threshold = isMobile ? 250 : window.innerHeight * 3.0
   isVisible.value = window.scrollY > threshold
 }
+
+watch(
+  () => route.path,
+  () => {
+    handleScroll()
+  }
+)
 
 const toggleTheme = (e) => {
   if (e.target.checked) {
