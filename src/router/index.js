@@ -33,7 +33,7 @@ const routes = [
     }
   },
   {
-    path: '/service',
+    path: '/services',
     name: 'Service',
     component: () => import('../pages/ServicePage.vue'),
     meta: {
