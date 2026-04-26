@@ -22,6 +22,15 @@ const routes = [
       title: 'About Coach Yohanes - Personal Trainer Canggu | Bali Fitness Coach',
       description: 'Learn more about Coach Yohanes, a professional personal trainer in Canggu, Bali. Discover his expertise and journey in fitness.'
     }
+  },
+  {
+    path: '/pricing',
+    name: 'Pricing',
+    component: () => import('../pages/PricingPage.vue'),
+    meta: {
+      title: 'Training Packages & Pricing | Coach Yohanes Canggu',
+      description: 'View all personal training packages and pricing by Coach Yohanes in Canggu, Bali. Starter, Momentum, Commit, and Elite plans available.'
+    }
   }, 
   {
     path: '/clients',

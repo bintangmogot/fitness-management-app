@@ -74,9 +74,6 @@
         <!-- SECTION 5: Column Layout -->
         <ColumnLayout />
 
-        <!-- SECTION 6: FAQs -->
-        <AccordionLayout class="border-t border-base-300 lg:py-32 max-w-7xl mx-auto" />
-
         <!-- SECTION 7: CTA -->
         <BannerLayout />
 

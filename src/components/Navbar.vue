@@ -118,6 +118,7 @@ import { useRoute } from 'vue-router'
 
 const navigation = [
   { name: 'ABOUT', to: '/about' },
+  { name: 'PRICING', to: '/pricing' },
   { name: 'CLIENTS', to: '/clients' },
   { name: 'SERVICES', to: '/services' },
   { name: 'FOOD', to: '/food' },
