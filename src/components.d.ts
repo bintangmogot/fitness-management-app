@@ -20,6 +20,7 @@ declare module 'vue' {
     CatalogLayout: typeof import('./components/layout/CatalogLayout.vue')['default']
     CatalogNutrition: typeof import('./components/CatalogNutrition.vue')['default']
     ClientsCarousel: typeof import('./components/ClientsCarousel.vue')['default']
+    ColumnLayout: typeof import('./components/layout/ColumnLayout.vue')['default']
     CTA: typeof import('./components/CTA.vue')['default']
     CTALayout: typeof import('./components/layout/CTALayout.vue')['default']
     Facts: typeof import('./components/Facts.vue')['default']

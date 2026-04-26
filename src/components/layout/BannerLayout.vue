@@ -4,7 +4,7 @@
     <!-- CTA Banner -->
     <div 
       data-aos="fade-up"
-      class="relative overflow-hidden bg-primary p-8 md:p-14 xl:px-20 lg:py-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 md:gap-10 group shadow-2xl"
+      class="relative overflow-hidden bg-primary p-6 md:p-14 xl:px-20 lg:py-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 md:gap-10 group shadow-2xl"
     >
       <!-- Background Decorative Elements -->
       <div class="absolute inset-0 bg-linear-to-r from-primary via-primary to-black/40 pointer-events-none"></div>
@@ -28,7 +28,7 @@
           <a 
             :href="buttonHref" 
             target="_blank"
-            class="bg-white text-primary px-10 py-5 font-heading text-2xl uppercase tracking-widest flex items-center justify-center gap-4 hover:bg-base-100 hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] group/btn relative overflow-hidden"
+            class="bg-white text-primary px-6 md:px-10 py-3 md:py-5 font-heading text-xl md:text-2xl uppercase tracking-widest flex items-center justify-center gap-4 hover:bg-base-100 hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(255,255,255,0.1)] group/btn relative overflow-hidden"
           >
             <div class="absolute inset-0 bg-primary/5 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
             <svg class="w-7 h-7 text-primary relative z-10 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,11 +87,11 @@ defineProps({
   images: {
     type: Array,
     default: () => [
-      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=1200&auto=format&fit=crop'
+      'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/run-community2',
+      'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/run-community3',
+      'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/run',
+      'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/yohanes3',
+      'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/run-community'
     ]
   },
   sectionClass: {

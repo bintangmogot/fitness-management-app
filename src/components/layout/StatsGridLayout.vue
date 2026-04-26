@@ -1,14 +1,14 @@
 <template>
-    <section :class="`bg-base-100 py-20 px-6 lg:px-20 xl:px-30 flex flex-col gap-12 ${sectionClass}`">
+    <section :class="`bg-base-100 py-20 px-6 lg:px-20 flex flex-col gap-12 ${sectionClass}`">
       <!-- Section Header -->
       <slot name="header">
-        <div class="flex flex-row items-center justify-start gap-4">
-          <div class="w-12 h-12 md:w-14 md:h-14 rounded-none bg-primary/10 flex items-center justify-center text-primary shrink-0">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-start gap-4 md:gap-6">
+          <div class="w-12 h-12 md:w-16 md:h-16 rounded-none bg-primary/10 flex items-center justify-center text-primary shrink-0">
             <span v-html="headerIcon"></span>
           </div>
-          <div>
-            <h4 class="font-title text-5xl uppercase text-base-content leading-none">{{ titleNormal }} <span class="text-primary">{{ titleHighlight }}</span></h4>
-            <p class="text-body text-base-content/60 mt-2 text-lg">{{ subtitle }}</p>
+          <div class="max-w-5xl w-full">
+            <h4 class="font-title text-3xl md:text-5xl uppercase text-base-content leading-none">{{ titleNormal }} <span class="text-primary">{{ titleHighlight }}</span></h4>
+            <p class="text-body text-base-content/60 mt-2 text-base md:text-lg">{{ subtitle }}</p>
           </div>
         </div>
       </slot>

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-base-100 py-20 px-6 lg:p-0 flex flex-col lg:min-h-[calc(100vh-100px)] items-stretch overflow-hidden" :class="isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'" data-aos="fade-up">
+  <section class="bg-base-100 py-20 px-6 lg:p-0 flex gap-12 md:gap-24 flex-col lg:min-h-[calc(100vh-100px)] items-stretch overflow-hidden" :class="isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'" data-aos="fade-up">
     <!-- Bagian Gambar -->
     <div class="w-full lg:w-1/2 flex items-center justify-center px-4 lg:px-0">
         <!-- Mobile/Tab View: Framed Design -->
@@ -19,12 +19,12 @@
     </div>
 
     <!-- Bagian Konten Teks -->
-    <div class="w-full lg:w-1/2 flex flex-col justify-center py-12 lg:py-20 px-0 lg:px-20 xl:px-32">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center py-12 lg:py-20 px-0 lg:px-20 xl:px-0">
        <slot name="content">
-         <div class="flex flex-col items-start gap-5 md:gap-10 max-w-xl mx-auto lg:mx-0">
+         <div class="flex flex-col items-start gap-2 md:gap-5 max-w-xl mx-auto lg:mx-0">
             <h3 class="text-base-content font-anton font-bold text-xl md:text-[32px] tracking-[4%] uppercase">{{ subtitle }}</h3>
             
-            <h2 class="text-8xl xl:text-9xl text-primary font-anton font-black uppercase leading-[0.85] md:leading-[0.8]">
+            <h2 class="text-6xl md:text-8xl xl:text-9xl text-primary font-anton font-black uppercase leading-[0.85] md:leading-[0.8]">
               {{ title }}
             </h2>
             

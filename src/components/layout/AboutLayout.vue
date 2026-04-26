@@ -1,3 +1,4 @@
+u
 <template>
   <section id="about" class="bg-base-100 py-20 px-6 md:px-12 lg:px-20 xl:px-30" data-aos="fade-up">
     <div :class="`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 xl:gap-24 items-center justify-center max-w-7xl mx-auto`">
@@ -39,7 +40,7 @@
             <div class="flex items-center gap-4 bg-base-100 p-4 border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow">
                 <UserGroupIcon class="w-8 h-8 text-base-content/80 shrink-0" />
                 <div>
-                  <h4 class="font-anton uppercase text-lg text-base-content/80">10+ Transformation</h4>
+                  <h4 class="font-anton uppercase text-lg text-base-content/80">50+ Transformation</h4>
                   <p class="text-xs text-base-content/60 uppercase tracking-wider font-semibold">Proven Results</p>
                 </div>
             </div>
