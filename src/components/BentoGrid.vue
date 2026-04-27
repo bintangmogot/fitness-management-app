@@ -194,7 +194,7 @@ const videoNames = [
     'gym-yohanes/videos/MARIA',
     'gym-yohanes/videos/MICHELE',
     'gym-yohanes/videos/LAURA',    
-    'gym-yohanes/videos/WORKOUT_TIPS_BY_PT_SITUPS',
+    'gym-yohanes/videos/MERLIN',
     'gym-yohanes/videos/MIRYAM',
     'gym-yohanes/videos/KENAN',    
     'gym-yohanes/videos/ALKESH',
@@ -212,7 +212,7 @@ const videoLabels = [
     { label: 'Maria', category: '', position: 'object-center' },
     { label: 'Michele', category: '', position: 'object-center' },
     { label: 'Laura', category: '', position: 'object-[center_60%]' }, // #5 - A little up
-    { label: 'Workout Tips', category: '', position: 'object-center' },
+    { label: 'Merlin', category: '', position: 'object-center' },
     { label: 'Miryam', category: '', position: 'object-center' },
     { label: 'Kenan', category: '', position: 'object-center' },
     { label: 'Alkesh', category: '', position: 'object-[center_20%]' }, // #9 - More up
