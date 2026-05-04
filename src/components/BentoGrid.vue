@@ -23,7 +23,7 @@
             <div class="relative z-10 text-center px-6 py-20 w-full overflow-hidden">
                 <span class="text-primary font-heading tracking-[0.3em] text-sm uppercase mb-2 block">Video Gallery</span>
                 <h2 class="text-5xl md:text-7xl text-white font-anton font-black uppercase leading-tight mb-5">
-                    10 <span class="text-primary">Videos.</span>
+                    11 <span class="text-primary">Videos.</span>
                 </h2>
                 <p class="text-primary-content/70 font-body text-md md:text-lg max-w-md mx-auto mb-8 leading-relaxed">
                     12 years of training, 5 years of coaching, every video is real proof of dedication and transformation built alongside our members.
@@ -181,7 +181,7 @@ const cellWidths = {
     6: 350, 7: 350,
     8: 1000,
     9: 350,
-    // 10: 350,
+    10: 350,
     // 11: 350,
     // 12: 450,
     // 13: 350,
@@ -192,13 +192,14 @@ const videoNames = [
     'gym-yohanes/videos/CLAUDIA_',
     'gym-yohanes/videos/GRETA',
     'gym-yohanes/videos/MARIA',
-    'gym-yohanes/videos/MICHELE',
+    'gym-yohanes/videos/MIRYAM',
     'gym-yohanes/videos/LAURA',    
     'gym-yohanes/videos/MERLIN',
-    'gym-yohanes/videos/MIRYAM',
     'gym-yohanes/videos/KENAN',    
+    'gym-yohanes/videos/MICHELE',
     'gym-yohanes/videos/ALKESH',
     'gym-yohanes/videos/LUCAS',
+    'gym-yohanes/videos/Nebai',
     // 'gym-yohanes/videos/20220502_124444',
     // 'gym-yohanes/videos/20230320_095346',
     // 'gym-yohanes/videos/20230318_175710',
@@ -210,13 +211,14 @@ const videoLabels = [
     { label: 'Claudia', category: '', position: 'object-center' },
     { label: 'Greta', category: '', position: 'object-center' },
     { label: 'Maria', category: '', position: 'object-center' },
-    { label: 'Michele', category: '', position: 'object-center' },
+    { label: 'Miryam', category: '', position: 'object-center' },
     { label: 'Laura', category: '', position: 'object-[center_60%]' }, // #5 - A little up
     { label: 'Merlin', category: '', position: 'object-center' },
-    { label: 'Miryam', category: '', position: 'object-center' },
     { label: 'Kenan', category: '', position: 'object-center' },
+    { label: 'Michele', category: '', position: 'object-center' },
     { label: 'Alkesh', category: '', position: 'object-[center_20%]' }, // #9 - More up
     { label: 'Lucas', category: '', position: 'object-[center_60%]' }, // #10 - Subtle up
+    { label: 'Nebai', category: '', position: 'object-center' }, // #11
 ]
 
 const videos = ref(videoNames.map((name, i) => ({
@@ -417,19 +419,20 @@ onUnmounted(() => {
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(5, 140px);
+    grid-template-rows: repeat(6, 140px);
     gap: 4px;
     grid-template-areas:
         "v1  v1  v2  v2  v2  v3  v3  v4  v4  v4"
         "v1  v1  v2  v2  v2  v3  v3  v4  v4  v4"
         "v5  v5  v5  v6  v6  v6  v6  v7  v7  v7"
         "v8  v8  v8  v6  v6  v6  v6  v7  v7  v7"
-        "v8  v8  v8  v9  v9  v9  v10 v10 v10 v10";
+        "v11  v11  v11  v9  v9  v9  v10 v10 v10 v10"
+        "v11 v11 v11 v9  v9  v9  v10 v10 v10 v10";
 }
 
 @media (min-width: 1280px) {
     .bento-grid {
-        grid-template-rows: repeat(5, 170px);
+        grid-template-rows: repeat(6, 170px);
     }
 }
 
@@ -443,7 +446,7 @@ onUnmounted(() => {
 .area-v8  { grid-area: v8; }
 .area-v9  { grid-area: v9; }
 .area-v10 { grid-area: v10; }
-/* .area-v11 { grid-area: v11; } */
+.area-v11 { grid-area: v11; }
 /* .area-v12 { grid-area: v12; }
 .area-v13 { grid-area: v13; }
 .area-v14 { grid-area: v14; }
