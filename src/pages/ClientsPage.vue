@@ -228,6 +228,41 @@ const clients = ref([
     desc: "Gained 5kg lean muscle",
     metric: "+5 KG"
   },
+  {
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/kenan-selfie",
+    title: "KENAN",
+    tag: "Hypertrophy",
+    desc: "Gained 5kg lean muscle",
+    metric: "+5 KG"
+  },
+  {
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/alkesh-selfie",
+    title: "ALKESH",
+    tag: "Hypertrophy",
+    desc: "Gained 5kg lean muscle",
+    metric: "+2 KG"
+  },
+  {
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/lucas-selfie",
+    title: "LUCAS",
+    tag: "Hypertrophy",
+    desc: "Gained 5kg lean muscle",
+    metric: "+2 KG"
+  },
+  {
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie",
+    title: "MARIA",
+    tag: "Hypertrophy",
+    desc: "Gained 5kg lean muscle",
+    metric: "+1 KG"
+  },
+  {
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
+    title: "MARIA",
+    tag: "Hypertrophy",
+    desc: "Gained 5kg lean muscle",
+    metric: "+1 KG"
+  },
 ]);
 
 // ==========================================

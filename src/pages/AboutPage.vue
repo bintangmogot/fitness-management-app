@@ -16,7 +16,7 @@
         <!-- SECTION 3: The Origin (Building the Foundation) -->
         <HeroSplitLayout 
           :isReversed="true"
-          image="https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/yohanes3"
+          image="https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/run-yohanes"
           subtitle="The Origin"
           title="SURABAYA"
           tagline="From Java to a Lifetime of Discipline."

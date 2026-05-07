@@ -152,7 +152,7 @@ const mobileGallery = [
     alt: 'Client Clemens',
   },
   {
-    src: 'https://res.cloudinary.com/workstation-/image/upload/f_auto,q_auto,w_300/gym-yohanes/images/yohanes/yohanes6',
+    src: 'https://res.cloudinary.com/workstation-/image/upload/f_auto,q_auto,w_300/gym-yohanes/images/yohanes/run-yohanes',
     alt: 'Gym Equipment',
   },
 ]

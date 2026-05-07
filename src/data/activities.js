@@ -36,6 +36,19 @@ export const activities = [
     ]
   },
   {
+    id: 'wednesday-fun-run',
+    title: 'Wednesday Fun Run',
+    date: '2026-05-06',
+    location: 'Avenue Fitness',
+    tag: 'Fun Run',
+    cover: 'images/yohanes/wednesday-run',
+    photos: [
+      { src: 'images/yohanes/wednesday-run', caption: 'Start the run' },
+      { src: 'images/yohanes/wednesday-run2', caption: 'Get to know each othe in So Munch Cafe' },
+      { src: 'images/yohanes/run-yohanes', caption: 'Yohanes' },
+    ]
+  },
+  {
     id: 'beach-pushup-challenge-apr-2026',
     title: 'Beach Push Up Challenge',
     date: '2026-04-05',
@@ -51,20 +64,22 @@ export const activities = [
     ]
   },
   {
-    id: 'sunrise-bootcamp-mar-2026',
-    title: 'Sunrise Beach Bootcamp',
-    date: '2026-03-29',
-    location: 'Echo Beach',
-    tag: 'Bootcamp',
-    cover: 'images/yohanes/yohanes2',
+    id: 'clients-sessions-2026',
+    title: 'Clients Sessions',
+    date: '2026',
+    location: 'Avenue Fitness',
+    tag: 'Training',
+    cover: 'images/clients/kenan-selfie',
     photos: [
-      { src: 'images/yohanes/yohanes2', caption: 'Golden hour training session' },
-      { src: 'images/yohanes/yohanes', caption: '' },
-      { src: 'images/yohanes/run-community', caption: 'Team warm-up circle' },
-      { src: 'images/yohanes/yohanes3', caption: 'Sand sprints drill' },
-      { src: 'images/yohanes/run-community2', caption: '' },
-      { src: 'images/yohanes/yohanes4', caption: 'Plank hold challenge' },
-      { src: 'images/yohanes/run-community3', caption: 'Post-bootcamp group photo' },
+      { src: 'videos/MICHELE', type: 'video', caption: 'Private PT Training Michele' },
+      { src: 'videos/LUCAS', type: 'video', caption: 'Private PT Training Lucas' },
+      { src: 'videos/MARIA', type: 'video', caption: 'Private PT Training Maria' },
+      { src: 'videos/GRETA', type: 'video', caption: 'Private PT Training Greta' },
+      { src: 'videos/KENAN', type: 'video', caption: 'Private PT Training Kenan' },
+      { src: 'videos/MIRYAM', type: 'video', caption: 'Private PT Training Miryam' },
+      { src: 'videos/CLAUDIA', type: 'video', caption: 'Private PT Training Claudia' },
+      { src: 'videos/LAURA', type: 'video', caption: 'Private PT Training Laura' },
+      { src: 'videos/CLAUDIA_', type: 'video', caption: 'Private PT Training Claudia_' },
     ]
   },
   {
@@ -77,60 +92,6 @@ export const activities = [
     photos: [
       { src: 'images/yohanes/run-community3', caption: 'Race day atmosphere' },
       { src: 'images/yohanes/run-community', caption: '' },
-      { src: 'images/yohanes/run-community2', caption: 'Mid-race determination' },
-      { src: 'images/yohanes/yohanes3', caption: '' },
-      { src: 'images/yohanes/yohanes', caption: 'Medal ceremony' },
-    ]
-  },
-  {
-    id: 'gym-training-highlights-mar-2026',
-    title: 'Gym Training Highlights',
-    date: '2026-03-15',
-    location: 'Shiro Gym',
-    tag: 'Training',
-    cover: 'images/yohanes/yohanes4',
-    photos: [
-      { src: 'images/yohanes/yohanes4', caption: 'Leg press personal best' },
-      { src: 'images/yohanes/yohanes', caption: 'Morning session focus' },
-      { src: 'images/yohanes/yohanes2', caption: '' },
-      { src: 'images/yohanes/yohanes6', caption: 'Cable work precision' },
-      { src: 'images/yohanes/yohanes3', caption: 'Bike cardio warm-up' },
-      { src: 'images/client-clemens', caption: 'Client Clemens PR day' },
-      { src: 'images/client1', caption: '' },
-    ]
-  },
-  {
-    id: 'morning-mobility-mar-2026',
-    title: 'Morning Mobility Session',
-    date: '2026-03-08',
-    location: 'Berawa Beach',
-    tag: 'Mobility',
-    cover: 'images/yohanes/yohanes6',
-    photos: [
-      { src: 'images/yohanes/yohanes6', caption: 'Dynamic stretching flow' },
-      { src: 'images/yohanes/yohanes', caption: '' },
-      { src: 'images/yohanes/yohanes2', caption: 'Hip opener series' },
-      { src: 'images/yohanes/run-community', caption: 'Group mobility circle' },
-      { src: 'images/yohanes/yohanes4', caption: '' },
-    ]
-  },
-  {
-    id: 'clients-sessions-2026',
-    title: 'Clients Sessions',
-    date: '2026',
-    location: 'Avenue Fitness',
-    tag: 'Training',
-    cover: 'images/yohanes-grassmc',
-    photos: [
-      { src: 'videos/MICHELE', type: 'video', caption: 'Private PT Training Michele' },
-      { src: 'videos/LUCAS', type: 'video', caption: 'Private PT Training Lucas' },
-      { src: 'videos/MARIA', type: 'video', caption: 'Private PT Training Maria' },
-      { src: 'videos/GRETA', type: 'video', caption: 'Private PT Training Greta' },
-      { src: 'videos/KENAN', type: 'video', caption: 'Private PT Training Kenan' },
-      { src: 'videos/MIRYAM', type: 'video', caption: 'Private PT Training Miryam' },
-      { src: 'videos/CLAUDIA', type: 'video', caption: 'Private PT Training Claudia' },
-      { src: 'videos/LAURA', type: 'video', caption: 'Private PT Training Laura' },
-      { src: 'videos/CLAUDIA_', type: 'video', caption: 'Private PT Training Claudia_' },
     ]
   },
 ];
