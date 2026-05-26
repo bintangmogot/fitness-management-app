@@ -125,6 +125,14 @@ router.afterEach((to) => {
   if (metaDescription) {
     metaDescription.setAttribute('content', description);
   }
+
+  // Track page view in Google Analytics
+  if (typeof window.gtag === 'function') {
+    window.gtag('config', 'G-9LKSQHLM25', {
+      page_title: document.title,
+      page_path: to.fullPath
+    })
+  }
 })
 
 export default router
