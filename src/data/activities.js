@@ -80,6 +80,7 @@ export const activities = [
       { src: 'videos/CLAUDIA', type: 'video', caption: 'Private PT Training Claudia' },
       { src: 'videos/LAURA', type: 'video', caption: 'Private PT Training Laura' },
       { src: 'videos/CLAUDIA_', type: 'video', caption: 'Private PT Training Claudia_' },
+      { src: 'videos/Akash', type: 'video', caption: 'Private PT Training Akash' },
     ]
   },
   {

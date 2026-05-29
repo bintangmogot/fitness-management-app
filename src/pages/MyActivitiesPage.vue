@@ -252,7 +252,7 @@ const getVideoThumbnailUrl = (path, width) => {
   const transforms = width ? `f_auto,q_auto,w_${width},so_auto` : 'f_auto,q_auto,so_auto';
   // Strip extension and replace with .jpg for Cloudinary image-from-video delivery
   const cleanPath = path.replace(/\.[^/.]+$/, "");
-  return `${CLOUD_IMG}/${transforms}/gym-yohanes/${cleanPath}.jpg`;
+  return `${CLOUD_VID}/${transforms}/gym-yohanes/${cleanPath}.jpg`;
 };
 
 // ==========================================
