@@ -64,26 +64,6 @@ export const activities = [
     ]
   },
   {
-    id: 'clients-sessions-2026',
-    title: 'Clients Sessions',
-    date: '2026',
-    location: 'Avenue Fitness',
-    tag: 'Training',
-    cover: 'images/clients/kenan-selfie',
-    photos: [
-      { src: 'videos/MICHELE', type: 'video', caption: 'Private PT Training Michele' },
-      { src: 'videos/LUCAS', type: 'video', caption: 'Private PT Training Lucas' },
-      { src: 'videos/MARIA', type: 'video', caption: 'Private PT Training Maria' },
-      { src: 'videos/GRETA', type: 'video', caption: 'Private PT Training Greta' },
-      { src: 'videos/KENAN', type: 'video', caption: 'Private PT Training Kenan' },
-      { src: 'videos/MIRYAM', type: 'video', caption: 'Private PT Training Miryam' },
-      { src: 'videos/CLAUDIA', type: 'video', caption: 'Private PT Training Claudia' },
-      { src: 'videos/LAURA', type: 'video', caption: 'Private PT Training Laura' },
-      { src: 'videos/CLAUDIA_', type: 'video', caption: 'Private PT Training Claudia_' },
-      { src: 'videos/Akash', type: 'video', caption: 'Private PT Training Akash' },
-    ]
-  },
-  {
     id: 'community-fun-run-mar-2026',
     title: 'Canggu Community Fun Run',
     date: '2026-03-22',

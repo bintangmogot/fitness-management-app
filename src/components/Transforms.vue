@@ -61,7 +61,7 @@
               <img :src="item.image" :alt="item.author" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
               
               <!-- Play Button Overlay -->
-              <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+              <div v-if="!isImage(item.video)" class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
                 <div class="w-16 h-16 rounded-full bg-white/20 border-2 hover:bg-base-100 hover:text-primary text-primary-content border-white/40 hover:border-primary backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform">
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
@@ -155,6 +155,12 @@
                 allowfullscreen
             ></iframe>
             
+            <img 
+                v-else-if="isImage(activeVideo)"
+                :src="activeVideo"
+                class="max-w-full max-h-[90vh] object-contain block"
+            />
+
             <video 
                 v-else
                 :src="activeVideo" 
@@ -187,6 +193,15 @@ const transforms = [
     text: "I came to Bali feeling out of shape. 3 months with Yohan changed everything. The accountability is next level.",
     author: "Bebo",
     role: "Entrepreneur"
+  },
+  {
+    id: 2,
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/client-clemens", 
+    video: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/client-clemens", 
+    headline: "Great Transformation",
+    text: "Best transformation with Coach Yohan. I lost 6kg in 4 months and feel great.",
+    author: "Clemens",
+    role: "Marketing"
   }
 ];
 
@@ -275,6 +290,12 @@ const getEmbedUrl = (url) => {
         videoId = urlParams.get('v');
     }
     return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+};
+
+// Helper to check if URL is an image
+const isImage = (url) => {
+    if (!url) return false;
+    return url.match(/\.(jpeg|jpg|gif|png|webp)$/i) != null || url.includes('/image/');
 };
 </script>
 

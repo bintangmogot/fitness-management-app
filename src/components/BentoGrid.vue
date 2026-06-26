@@ -55,7 +55,7 @@
                             
                             <!-- Video Info Overlay -->
                             <div class="absolute bottom-0 left-0 right-0 p-3 bg-linear-to-t from-black/80 to-transparent">
-                                <span class="text-white text-xs font-heading tracking-wider uppercase">{{ video.label }}</span>
+                                <span class="text-white text-xl font-heading tracking-wider uppercase">{{ video.label }}</span>
                             </div>
 
                             <!-- Active Indicator Border -->
@@ -189,12 +189,12 @@ const cellWidths = {
 }
 
 const videoNames = [
-    'gym-yohanes/videos/CLAUDIA_',
+    'gym-yohanes/videos/mahalini',
     'gym-yohanes/videos/GRETA',
     'gym-yohanes/videos/MARIA',
     'gym-yohanes/videos/MIRYAM',
     'gym-yohanes/videos/LAURA',    
-    'gym-yohanes/videos/MERLIN',
+    'gym-yohanes/videos/CLAUDIA_',
     'gym-yohanes/videos/KENAN',    
     'gym-yohanes/videos/MICHELE',
     'gym-yohanes/videos/ALKESH',
@@ -208,12 +208,12 @@ const videoNames = [
 ]
 
 const videoLabels = [
-    { label: 'Claudia', category: '', position: 'object-center' },
+    { label: 'Mahalini', category: '', position: 'object-center' },
     { label: 'Greta', category: '', position: 'object-center' },
     { label: 'Maria', category: '', position: 'object-center' },
     { label: 'Miryam', category: '', position: 'object-center' },
     { label: 'Laura', category: '', position: 'object-[center_60%]' }, // #5 - A little up
-    { label: 'Merlin', category: '', position: 'object-center' },
+    { label: 'Claudia', category: '', position: 'object-center' },
     { label: 'Kenan', category: '', position: 'object-center' },
     { label: 'Michele', category: '', position: 'object-center' },
     { label: 'Alkesh', category: '', position: 'object-[center_20%]' }, // #9 - More up
