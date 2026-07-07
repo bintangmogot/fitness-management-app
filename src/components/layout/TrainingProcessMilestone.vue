@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-7xl mx-auto mt-8 mb-16 md:mt-12 md:mb-24 px-4 lg:px-0 py-3 xl:py-5 border-3 border-primary/70 xl:border-10 bg-primary/1">
-    <div class="text-center mb-16 md:mb-24">
+    <div class="text-center mb-8 md:mb-16">
       <div class="inline-flex items-center justify-center gap-2 mb-2 bg-error/10 text-error px-4 py-1.5 rounded-full border border-error/20">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
         <h3 class="font-title italic font-black text-sm md:text-md tracking-widest leading-none mt-0.5">IMPORTANT PREREQUISITES</h3>
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Timeline Container -->
-    <div class="relative max-w-5xl mx-auto py-4 md:py-10 px-2 sm:px-4 md:px-0">
+    <div class="relative max-w-5xl ml-[-12px] sm:mx-auto py-4 md:py-10 sm:px-4 md:px-0">
       <!-- Vertical Line Desktop -->
       <div class="absolute left-[39px] md:left-1/2 top-4 bottom-4 w-1 bg-primary/20 transform md:-translate-x-1/2 rounded-full hidden md:block"></div>
       

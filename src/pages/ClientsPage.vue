@@ -47,7 +47,7 @@
           <div 
             v-for="(client, index) in paginatedClients" 
             :key="'m-grid-' + index"
-            class="bg-base-100 border border-primary/5 overflow-hidden group transition-all duration-300"
+            class="bg-base-100 border border-primary shadow-md shadow-primary/8  overflow-hidden group transition-all duration-300"
           >
             <!-- Square Image for Mobile -->
             <div class="relative overflow-hidden cursor-pointer" @click="openModal(client.video || client.image)">
@@ -71,11 +71,7 @@
             </div>
             <!-- Simple Info -->
             <div class="p-2 flex flex-col gap-1">
-              <h3 class="text-sm font-anton uppercase text-base-content leading-tight truncate">{{ client.title }}</h3>
-              <div class="flex justify-between items-center">
-                <p class="text-[10px] font-body text-base-content/60">{{ client.metric }}</p>
-                <span class="text-[9px] font-heading text-primary bg-primary/5 px-1.5 py-0.5">VIEW</span>
-              </div>
+              <h3 class="text-lg font-anton uppercase text-base-content leading-tight truncate">{{ client.title }}</h3>
             </div>
           </div>
         </div>
@@ -136,7 +132,7 @@
             <div 
               v-for="(client, i) in paginatedClients" 
               :key="i" 
-              class="bg-base-100 border border-primary/5 overflow-hidden group hover:border-primary/15 hover:shadow-xl hover:shadow-primary/8 hover:-translate-y-1 transition-all duration-500 animate-card-in"
+              class="bg-base-100 border border-primary/8 shadow-sm shadow-primary/8 overflow-hidden group hover:border-primary hover:shadow-xl hover:shadow-primary/8 hover:-translate-y-1 transition-all duration-500 animate-card-in"
               :style="{ animationDelay: `${i * 100}ms` }"
             >
               <!-- Image Container -->
@@ -172,14 +168,11 @@
               </div>
 
               <!-- Info Section -->
-              <div class="p-5 xl:p-6 flex items-start justify-between gap-3">
+              <div class="p-5 xl:p-6">
                 <div class="flex flex-col gap-1">
-                  <h3 class="text-xl font-anton uppercase text-base-content leading-tight group-hover:text-primary transition-colors duration-300">{{ client.title }}</h3>
+                  <h3 class="text-2xl font-anton uppercase text-base-content leading-tight group-hover:text-primary transition-colors duration-300">{{ client.title }}</h3>
                   <p class="text-sm font-body text-base-content/60">{{ client.desc }}</p>
                 </div>
-                <span class="shrink-0 text-sm font-heading text-primary bg-primary/8 px-3 py-1.5 tracking-wide mt-0.5">
-                  {{ client.metric }}
-                </span>
               </div>
             </div>
           </div>
@@ -263,7 +256,6 @@ const clients = ref([
     title: "MAHALINI",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },  
   {
 
@@ -272,7 +264,6 @@ const clients = ref([
     title: "KENAN",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/alkesh-selfie",
@@ -280,7 +271,6 @@ const clients = ref([
     title: "ALKESH",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/lucas-selfie",
@@ -288,7 +278,6 @@ const clients = ref([
     title: "LUCAS",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie",
@@ -296,7 +285,6 @@ const clients = ref([
     title: "MARIA",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
@@ -304,7 +292,6 @@ const clients = ref([
     title: "NEBAI",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
@@ -312,7 +299,6 @@ const clients = ref([
     title: "LAURA",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
@@ -320,7 +306,13 @@ const clients = ref([
     title: "MIRYAM",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
+  },
+  {
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
+    video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/ERIK",
+    title: "ERIK",
+    tag: "PRIVATE PT",
+    desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
@@ -328,7 +320,6 @@ const clients = ref([
     title: "GRETA",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
@@ -336,7 +327,6 @@ const clients = ref([
     title: "MICHELE",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
@@ -344,7 +334,6 @@ const clients = ref([
     title: "MERLIN",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
@@ -352,7 +341,6 @@ const clients = ref([
     title: "CLAUDIA",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
@@ -360,7 +348,6 @@ const clients = ref([
     title: "AKASH",
     tag: "PRIVATE PT",
     desc: "Private PT Training Session",
-    metric: "SESSION"
   },
 ]);
 

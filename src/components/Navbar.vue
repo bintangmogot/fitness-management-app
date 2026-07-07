@@ -157,10 +157,8 @@ const handleScroll = () => {
     return
   }
 
-  const isMobile = window.innerWidth < 768
-  // Mobile: muncul lebih cepat (250px)
-  // Desktop: muncul setelah 300vh di homepage
-  const threshold = isMobile ? 250 : window.innerHeight * 3.0
+  // Navbar appears after 100vh scroll on homepage
+  const threshold = window.innerHeight
   isVisible.value = window.scrollY > threshold
 }
 

@@ -130,7 +130,7 @@
                         <!-- Label -->
                         <div class="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-card-dark/80 via-dark-bg/40 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                             <span class="text-primary text-[10px] font-heading tracking-[0.2em] uppercase block mb-1">{{ video.category }}</span>
-                            <span class="text-white text-sm font-heading tracking-wider uppercase">{{ video.label }}</span>
+                            <span class="text-white text-2xl font-heading tracking-wider uppercase">{{ video.label }}</span>
                         </div>
 
                         <!-- Index Number -->
