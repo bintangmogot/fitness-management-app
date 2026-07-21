@@ -357,9 +357,9 @@ const clients = ref([
     desc: "Private PT Training Session",
   },
   {
-    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
+    image: "https://res.cloudinary.com/workstation-/image/upload/v1784629042/gym-yohanes/images/Clients/TIMUR",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1784621229/gym-yohanes/videos/Tim",
-    title: "TIM",
+    title: "TIMUR",
     tag: "UNITED KINGDOM",
     desc: "Private PT Training Session",
   },
