@@ -87,42 +87,42 @@ const programs = [
     tag: 'Body Transformation',
     title: 'FAT LOSS & BODY RECOMPOSITION',
     description: 'The most requested program. We combine resistance training with strategic cardio and a meal plan built around what is actually available in Bali. The goal is simple — lower your body fat percentage while building or preserving lean muscle. We track progress with photos, measurements, and how your clothes fit. Not just the scale.',
-    image: 'https://res.cloudinary.com/workstation-/image/upload/f_auto,q_auto/v1727932644/gym-yohanes/1-client.jpg',
+    image: 'https://res.cloudinary.com/workstation-/image/upload/v1784627715/gym-yohanes/images/readme/body-recomposition',
     idealFor: ['Weight Loss', 'First Timers', 'Short-Stay Visitors']
   },
   {
     tag: 'Strength & Performance',
     title: 'STRENGTH BUILDING',
     description: 'Progressive overload done right. We focus on compound movements — squat, bench, deadlift, overhead press — and build a structured program that gets you stronger week after week. Every session is logged, every set has a purpose. Whether you have been lifting for years or just want to feel strong for the first time.',
-    image: 'https://res.cloudinary.com/workstation-/image/upload/f_auto,q_auto/gym-yohanes/images/avenue3',
+    image: 'https://res.cloudinary.com/workstation-/image/upload/v1784627715/gym-yohanes/images/readme/strength',
     idealFor: ['Intermediate', 'Advanced', 'Athletes']
   },
   {
     tag: 'Muscle Development',
     title: 'HYPERTROPHY & AESTHETICS',
     description: 'For those who want to look the part, not just perform. We train with higher volume, controlled tempos, and targeted isolation work to build size and symmetry. Back, chest, shoulders, arms, legs — we hit everything with intention. You will see the difference in the mirror within weeks.',
-    image: 'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/yohanes3',
+    image: 'https://res.cloudinary.com/workstation-/image/upload/v1784627717/gym-yohanes/images/readme/hypertrophy',
     idealFor: ['Bodybuilding', 'Aesthetics', 'Mass Gain']
   },
   {
     tag: 'Conditioning',
     title: 'FUNCTIONAL FITNESS & CONDITIONING',
     description: 'Move better, feel better. This program blends full-body strength work with metabolic conditioning — think circuit training, kettlebell flows, and bodyweight complexes. It is designed for people who want to be fit for life, not just look good at the beach. Although you will probably look good at the beach too.',
-    image: 'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/run-community3',
+    image: 'https://res.cloudinary.com/workstation-/image/upload/v1784627715/gym-yohanes/images/readme/functional',
     idealFor: ['General Fitness', 'Surfers', 'Active Lifestyle']
   },
   {
     tag: 'Recovery & Mobility',
     title: 'MOBILITY & INJURY PREVENTION',
     description: 'Crucial for anyone who trains hard or sits at a desk all day. We work on joint mobility, flexibility, posture correction, and movement patterns that keep your body healthy long-term. Every session includes targeted stretching, activation drills, and breathing work. This is the program most people skip — and the one they need most.',
-    image: 'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/run-community',
+    image: 'https://res.cloudinary.com/workstation-/image/upload/v1784627717/gym-yohanes/images/readme/mobility',
     idealFor: ['Desk Workers', 'Recovery', 'All Levels']
   },
   {
     tag: 'Nutrition',
     title: 'MEAL PLANNING & MACRO COACHING',
     description: 'Training is only half the equation. I build a custom meal plan based on your goals, your budget, and what you can actually find in Canggu. No restrictive diets, no expensive supplements — just practical, sustainable eating that supports your training. We adjust weekly based on your progress and how your body responds.',
-    image: 'https://res.cloudinary.com/workstation-/image/upload/f_auto/q_auto/gym-yohanes/images/yohanes/run-community2',
+    image: 'https://res.cloudinary.com/workstation-/image/upload/v1784627718/gym-yohanes/images/readme/meal-plan',
     idealFor: ['All Programs', 'Dietary Guidance', 'Macro Tracking']
   }
 ]

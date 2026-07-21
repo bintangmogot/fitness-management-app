@@ -57,7 +57,7 @@
                 class="w-full aspect-square object-cover" 
               />
               <!-- Small Tag -->
-              <span class="absolute top-2 left-2 bg-primary text-white text-[8px] font-heading tracking-wider uppercase px-2 py-0.5 z-10">
+              <span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-heading tracking-wider uppercase px-2 py-0.5 z-10">
                 {{ client.tag }}
               </span>
               <!-- Play Button Overlay -->
@@ -144,7 +144,7 @@
                 />
                 
                 <!-- Tag badge -->
-                <span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-heading tracking-[0.15em] uppercase px-3 py-1 shadow-lg shadow-primary/20 z-10">
+                <span class="absolute top-4 left-4 bg-primary text-white text-[14px] font-heading tracking-[0.15em] uppercase px-3 py-1 shadow-lg shadow-primary/20 z-10">
                   {{ client.tag }}
                 </span>
 
@@ -254,7 +254,7 @@ const clients = ref([
     image: "https://res.cloudinary.com/workstation-/image/upload/v1782488375/gym-yohanes/images/Clients/mahalini-friends",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1782485735/gym-yohanes/videos/mahalini",
     title: "MAHALINI",
-    tag: "PRIVATE PT",
+    tag: "BALI, INDONESIA",
     desc: "Private PT Training Session",
   },  
   {
@@ -262,91 +262,105 @@ const clients = ref([
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/kenan-selfie",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/KENAN",
     title: "KENAN",
-    tag: "PRIVATE PT",
+    tag: "BALI, INDONESIA",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/alkesh-selfie",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/ALKESH",
     title: "ALKESH",
-    tag: "PRIVATE PT",
+    tag: "DELHI, INDIA",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/lucas-selfie",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/LUCAS",
     title: "LUCAS",
-    tag: "PRIVATE PT",
+    tag: "SPAIN",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/MARIA",
     title: "MARIA",
-    tag: "PRIVATE PT",
+    tag: "SPAIN",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/NEBAI",
     title: "NEBAI",
-    tag: "PRIVATE PT",
+    tag: "SPAIN",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/LAURA",
     title: "LAURA",
-    tag: "PRIVATE PT",
+    tag: "ITALY",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/MIRYAM",
     title: "MIRYAM",
-    tag: "PRIVATE PT",
+    tag: "SPAIN",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/ERIK",
     title: "ERIK",
-    tag: "PRIVATE PT",
+    tag: "AUSTRALIA",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/GRETA",
     title: "GRETA",
-    tag: "PRIVATE PT",
+    tag: "AUSTRALIA",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/MICHELE",
     title: "MICHELE",
-    tag: "PRIVATE PT",
+    tag: "SPAIN",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/MERLIN",
     title: "MERLIN",
-    tag: "PRIVATE PT",
+    tag: "UNITED STATES",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/CLAUDIA_",
     title: "CLAUDIA",
-    tag: "PRIVATE PT",
+    tag: "GERMANY",
     desc: "Private PT Training Session",
   },
   {
     image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
     video: "https://res.cloudinary.com/workstation-/video/upload/v1772813222/gym-yohanes/videos/AKASH",
     title: "AKASH",
-    tag: "PRIVATE PT",
+    tag: "INDIA",
+    desc: "Private PT Training Session",
+  },
+  {
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
+    video: "https://res.cloudinary.com/workstation-/video/upload/v1784621226/gym-yohanes/videos/Daniel",
+    title: "DANIEL",
+    tag: "UNITED KINGDOM",
+    desc: "Private PT Training Session",
+  },
+  {
+    image: "https://res.cloudinary.com/workstation-/image/upload/f_auto/gym-yohanes/images/clients/maria-selfie-2",
+    video: "https://res.cloudinary.com/workstation-/video/upload/v1784621229/gym-yohanes/videos/Tim",
+    title: "TIM",
+    tag: "UNITED KINGDOM",
     desc: "Private PT Training Session",
   },
 ]);

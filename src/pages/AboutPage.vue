@@ -27,7 +27,7 @@
               <ul class="flex flex-col gap-3">
                 <li class="flex items-start gap-3">
                   <span class="text-primary font-bold">1/</span>
-                  <span class="text-base"><strong class="text-base-content">My Why:</strong> I grew up in Surabaya watching my father smoke his whole life. I made a promise to myself — I would go the opposite direction. That decision changed everything for me.</span>
+                  <span class="text-base"><strong class="text-base-content">My Why:</strong> I grew up in Surabaya watching my friends smoke their whole life, being fat, etc. I made a promise to myself... I would go the opposite direction, focus more on my health and fitness. That decision changed my life.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-primary font-bold">2/</span>
@@ -35,7 +35,7 @@
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-primary font-bold">3/</span>
-                  <span class="text-base"><strong class="text-base-content">More Than a Trainer:</strong> I graduated with a Bachelor's in English — I believe understanding people deeply is just as important as understanding the body. Communication is everything in coaching.</span>
+                  <span class="text-base"><strong class="text-base-content">More Than a Trainer:</strong> I graduated with a Bachelor's in English, and I believe understanding people deeply is just as important as understanding the body. Communication is everything in coaching.</span>
                 </li>
               </ul>
             </div>
@@ -56,7 +56,7 @@
               <ul class="flex flex-col gap-3">
                 <li class="flex items-start gap-3">
                   <span class="text-primary font-bold">1/</span>
-                  <span class="text-base"><strong class="text-base-content">Home in Canggu:</strong> I moved to Bali and never looked back. I now manage and train full-time at Avenue Fitness. Every day I get to help people — tourists, expats, locals — transform their bodies and mindset.</span>
+                  <span class="text-base"><strong class="text-base-content">Home in Canggu:</strong> I moved to Bali and never looked back. I now manage and train full-time at <a class="text-primary hover:underline" href="https://avenuefitnessbali.com/" target="_blank">Avenue Fitness</a>. Every day I get to help people, tourists, expats, locals and transform their bodies and mindset.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-primary font-bold">2/</span>
@@ -64,7 +64,7 @@
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="text-primary font-bold">3/</span>
-                  <span class="text-base"><strong class="text-base-content">I Know Your Name:</strong> I make it a point to know every single member's name. The gym should feel like family — not a service. That's the culture I try to build every day.</span>
+                  <span class="text-base"><strong class="text-base-content">I Know Your Name:</strong> I make it a point to know every single member's name. The gym should feel like family, not a service. That's the culture I try to build every day.</span>
                 </li>
               </ul>
             </div>
